@@ -7,6 +7,12 @@
     <version>0.0.1</version>
     <name>semantify Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <!-- PROPS -->
     <properties>
         <jersey2.version>2.22.2</jersey2.version>
@@ -27,6 +33,17 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.visualdataweb.vowl.owl2vowl/OWL2VOWL -->
+        <!--<dependency>-->
+            <!--<groupId>org.visualdataweb.vowl.owl2vowl</groupId>-->
+            <!--<artifactId>OWL2VOWL</artifactId>-->
+            <!--<version>0.2.1</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.github.VisualDataWeb</groupId>
+            <artifactId>OWL2VOWL</artifactId>
+            <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
         </dependency>
         <!-- JERSEY -->
         <dependency>
