@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.semantify.webapp</groupId>
+    <artifactId>semantify</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1</version>
+    <name>semantify Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <jersey2.version>2.22.2</jersey2.version>
+        <jaxrs.version>2.0.1</jaxrs.version>
+        <junit.version>3.8.1</junit.version>
+    </properties>
+
+    <dependencies>
+        <!-- JUNIT -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.visualdataweb.vowl.owl2vowl/OWL2VOWL -->
+        <!--<dependency>-->
+            <!--<groupId>org.visualdataweb.vowl.owl2vowl</groupId>-->
+            <!--<artifactId>OWL2VOWL</artifactId>-->
+            <!--<version>0.2.1</version>-->
+            <!--</dependency>-->
+        <!-- JERSEY -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <!-- JAX-RS -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        <!-- APACHE JENA -->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena-libs</artifactId>
+            <type>pom</type>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!--dependency>
+            <groupId>com.github.VisualDataWeb</groupId>
+            <artifactId>OWL2VOWL</artifactId>
+            <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
+        </dependency-->
+
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.logging.log4j</groupId>-->
+            <!--<artifactId>log4j-core</artifactId>-->
+            <!--<version>2.5</version>-->
+            <!--</dependency>-->
+    </dependencies>
+
+    <build>
+        <finalName>semantify</finalName>
+        <plugins>
+            <!-- TOMCAT VERSION -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <server>TomcatServer</server>
+                    <path>/semantify</path>
+                </configuration>
+            </plugin>
+
+            <!-- Fix problem in Ubuntu -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
