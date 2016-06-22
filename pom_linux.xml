@@ -81,7 +81,6 @@
             <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
         </dependency-->
 
-        <!-- http://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
