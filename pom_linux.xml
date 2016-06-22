@@ -29,6 +29,17 @@
             <!--<artifactId>OWL2VOWL</artifactId>-->
             <!--<version>0.2.1</version>-->
             <!--</dependency>-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.8.11.2</version>
+        </dependency>
         <!-- JERSEY -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
@@ -43,6 +54,11 @@
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
             <version>${jersey2.version}</version>
         </dependency>
         <!-- JAX-RS -->
@@ -64,6 +80,13 @@
             <artifactId>OWL2VOWL</artifactId>
             <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
         </dependency-->
+
+        <!-- http://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.directory.studio</groupId>
