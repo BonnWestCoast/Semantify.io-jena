@@ -12,11 +12,14 @@ import org.apache.commons.io.IOUtils;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 
-
+/**
+ * This is a POJO class useful to return JSON format in the response of the services.
+ */
 class Element {
 
     int id;
     String name;
+    String content;
 
     public Element() {}
 
@@ -25,8 +28,17 @@ class Element {
         this.name = name;
     }
 
+    public Element(int id, String name, String content) {
+        this.id = id;
+        this.name = name;
+        this.content = content;
+    }
+
 }
 
+/**
+ * This is a POJO class useful to return JSON format in the response of the services.
+ */
 class elementList {
 
     public ArrayList<Element> list;
@@ -117,7 +129,8 @@ public class Endpoints {
             while (rs.next()) {
                 int id_ = rs.getInt("id");
                 String name = rs.getString("name");
-                element = new Element(id_, name);
+                String content = rs.getString("xml_file");
+                element = new Element(id_, name, content);
             }
 
             stmt.close();
