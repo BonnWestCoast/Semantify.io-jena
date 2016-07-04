@@ -1,6 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.semantify.webapp</groupId>
     <artifactId>semantify</artifactId>
@@ -14,14 +13,38 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-
+    <!-- PROPS -->
     <properties>
         <jersey2.version>2.22.2</jersey2.version>
         <jaxrs.version>2.0.1</jaxrs.version>
         <junit.version>3.8.1</junit.version>
+        <!--local.glassfish.home>C:\\glassfish4\\glassfish</local.glassfish.home>
+        <local.glassfish.user>admin</local.glassfish.user>
+        <local.glassfish.domain>domain1</local.glassfish.domain>
+        <local.glassfish.passfile>
+            ${local.glassfish.home}\\domains\\${local.glassfish.domain}\\config\\domain-passwords
+        </local.glassfish.passfile-->
     </properties>
-
+    <!-- DEPS -->
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- GSON -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <!-- SQLITE -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.8.11.2</version>
+        </dependency>
         <!-- JUNIT -->
         <dependency>
             <groupId>junit</groupId>
@@ -29,22 +52,16 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- http://mvnrepository.com/artifact/org.visualdataweb.vowl.owl2vowl/OWL2VOWL -->
+        <!--<dependency>-->
+            <!--<groupId>org.visualdataweb.vowl.owl2vowl</groupId>-->
+            <!--<artifactId>OWL2VOWL</artifactId>-->
+            <!--<version>0.2.1</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.github.VisualDataWeb</groupId>
             <artifactId>OWL2VOWL</artifactId>
-            <scope>provided</scope>
             <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.xerial</groupId>
-            <artifactId>sqlite-jdbc</artifactId>
-            <version>3.8.11.2</version>
         </dependency>
         <!-- JERSEY -->
         <dependency>
@@ -80,40 +97,19 @@
             <type>pom</type>
             <version>3.1.0</version>
         </dependency>
-
-        <!--dependency>
-            <groupId>com.github.VisualDataWeb</groupId>
-            <artifactId>OWL2VOWL</artifactId>
-            <version>1deb513e32e405034954ff13bf7bc33a87287300</version>
-        </dependency-->
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.6.2</version>
-        </dependency>
-
         <dependency>
             <groupId>org.apache.directory.studio</groupId>
             <artifactId>org.apache.commons.io</artifactId>
             <version>2.4</version>
+            <scope>provided</scope>
         </dependency>
         <!-- http://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <!--<dependency>-->
             <!--<groupId>org.apache.logging.log4j</groupId>-->
             <!--<artifactId>log4j-core</artifactId>-->
             <!--<version>2.5</version>-->
-            <!--</dependency>-->
-
-        <!-- XSOM Dependency to parse XML Schema documents -->
-        <dependency>
-            <groupId>com.sun.xsom</groupId>
-            <artifactId>xsom</artifactId>
-            <version>20140925</version>
-        </dependency>
-
+        <!--</dependency>-->
     </dependencies>
-
     <build>
         <finalName>semantify</finalName>
         <plugins>
@@ -127,18 +123,38 @@
                     <path>/semantify</path>
                 </configuration>
             </plugin>
-
-            <!-- Fix problem in Ubuntu -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
             </plugin>
-
+            <!-- GLASSFISH -->
+            <!--<plugin>-->
+                <!--<groupId>org.glassfish.maven.plugin</groupId>-->
+                <!--<artifactId>maven-glassfish-plugin</artifactId>-->
+                <!--<version>2.1</version>-->
+                <!--<configuration>-->
+                    <!--<glassfishDirectory>${local.glassfish.home}</glassfishDirectory>-->
+                    <!--<user>admin</user>-->
+                    <!--<passwordFile>${local.glassfish.passfile}</passwordFile>-->
+                    <!--<domain>-->
+                        <!--<name>domain1</name>-->
+                        <!--<httpPort>8080</httpPort>-->
+                        <!--<adminPort>4848</adminPort>-->
+                    <!--</domain>-->
+                    <!--<components>-->
+                        <!--<component>-->
+                            <!--<name>${project.artifactId}</name>-->
+                            <!--<artifact>target/${project.build.finalName}.war</artifact>-->
+                        <!--</component>-->
+                    <!--</components>-->
+                    <!--<debug>true</debug>-->
+                    <!--<terse>false</terse>-->
+                    <!--<echo>true</echo>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
-
 </project>
