@@ -2,15 +2,8 @@ package opcua.ontmalizer;
 
 import tr.com.srdc.ontmalizer.XML2OWLMapper;
 import tr.com.srdc.ontmalizer.XSD2OWLMapper;
-
 import java.io.File;
 import java.io.FileOutputStream;
-
-//import java.io.FileWriter;
-//import java.io.Writer;
-//import org.junit.Test;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 
 /**
  * Created by shinho on 6/28/16.
