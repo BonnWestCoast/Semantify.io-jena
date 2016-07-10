@@ -1,0 +1,1973 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dtype="http://www.srdc.com.tr/ontmalizer#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#InverseName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extension"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserExecutable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#StructureTranslationType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAType">
+    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANode"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ServerUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeToDelete"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Node"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TranslationType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Translation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Definition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRankDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#RequiredModel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataTypeField">
+    <rdfs:subClassOf rdf:nodeID="A20"/>
+    <rdfs:subClassOf rdf:nodeID="A21"/>
+    <rdfs:subClassOf rdf:nodeID="A22"/>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:subClassOf rdf:nodeID="A24"/>
+    <rdfs:subClassOf rdf:nodeID="A25"/>
+    <rdfs:subClassOf rdf:nodeID="A26"/>
+    <rdfs:subClassOf rdf:nodeID="A27"/>
+    <rdfs:subClassOf rdf:nodeID="A28"/>
+    <rdfs:subClassOf rdf:nodeID="A29"/>
+    <rdfs:subClassOf rdf:nodeID="A30"/>
+    <rdfs:subClassOf rdf:nodeID="A31"/>
+    <rdfs:subClassOf rdf:nodeID="A32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A33"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A34"/>
+    <rdfs:subClassOf rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DisplayName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extension"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRankDatatype">
+    <owl:equivalentClass rdf:nodeID="A37"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#InverseName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Uri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensionsDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsUnion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Models"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Node"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A46"/>
+    <rdfs:subClassOf rdf:nodeID="A47"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MethodDeclarationId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Models"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A50"/>
+    <rdfs:subClassOf rdf:nodeID="A51"/>
+    <rdfs:subClassOf rdf:nodeID="A52"/>
+    <rdfs:subClassOf rdf:nodeID="A53"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsUnion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject">
+    <rdfs:subClassOf rdf:nodeID="A55"/>
+    <rdfs:subClassOf rdf:nodeID="A56"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BaseType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Translation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#RequiredModel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#InverseName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANodeSetChanges">
+    <rdfs:subClassOf rdf:nodeID="A63"/>
+    <rdfs:subClassOf rdf:nodeID="A64"/>
+    <rdfs:subClassOf rdf:nodeID="A65"/>
+    <rdfs:subClassOf rdf:nodeID="A66"/>
+    <rdfs:subClassOf rdf:nodeID="A67"/>
+    <rdfs:subClassOf rdf:nodeID="A68"/>
+    <rdfs:subClassOf rdf:nodeID="A69"/>
+    <rdfs:subClassOf rdf:nodeID="A70"/>
+    <rdfs:subClassOf rdf:nodeID="A71"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A72"/>
+    <rdfs:subClassOf rdf:nodeID="A73"/>
+    <rdfs:subClassOf rdf:nodeID="A74"/>
+    <rdfs:subClassOf rdf:nodeID="A75"/>
+    <rdfs:subClassOf rdf:nodeID="A76"/>
+    <rdfs:subClassOf rdf:nodeID="A77"/>
+    <rdfs:subClassOf rdf:nodeID="A78"/>
+    <rdfs:subClassOf rdf:nodeID="A79"/>
+    <rdfs:subClassOf rdf:nodeID="A80"/>
+    <rdfs:subClassOf rdf:nodeID="A81"/>
+    <rdfs:subClassOf rdf:nodeID="A82"/>
+    <rdfs:subClassOf rdf:nodeID="A83"/>
+    <rdfs:subClassOf rdf:nodeID="A84"/>
+    <rdfs:subClassOf rdf:nodeID="A85"/>
+    <rdfs:subClassOf rdf:nodeID="A86"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype">
+    <owl:equivalentClass rdf:nodeID="A87"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifierDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#QualifiedNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BaseType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceChange">
+    <rdfs:subClassOf rdf:nodeID="A91"/>
+    <rdfs:subClassOf rdf:nodeID="A92"/>
+    <rdfs:subClassOf rdf:nodeID="A93"/>
+    <rdfs:subClassOf rdf:nodeID="A94"/>
+    <rdfs:subClassOf rdf:nodeID="A95"/>
+    <rdfs:subClassOf rdf:nodeID="A96"/>
+    <rdfs:subClassOf rdf:nodeID="A97"/>
+    <rdfs:subClassOf rdf:nodeID="A40"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NamespaceUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_1"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Historizing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Status"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ContainsNoLoops"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_2"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extension"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRankDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToChange"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UriTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ServerUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifierDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatus">
+    <rdfs:subClassOf rdf:nodeID="A116"/>
+    <rdfs:subClassOf rdf:nodeID="A117"/>
+    <rdfs:subClassOf rdf:nodeID="A118"/>
+    <rdfs:subClassOf rdf:nodeID="A119"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataTypeDefinition"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Definition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataTypeField"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#InverseName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UriTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NamespaceUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType">
+    <rdfs:subClassOf rdf:nodeID="A129"/>
+    <rdfs:subClassOf rdf:nodeID="A125"/>
+    <rdfs:subClassOf rdf:nodeID="A130"/>
+    <rdfs:subClassOf rdf:nodeID="A131"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAType"/>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
+    <rdfs:subClassOf rdf:nodeID="A102"/>
+    <rdfs:subClassOf rdf:nodeID="A132"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A60"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Definition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AcceptAllOrNothing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MinimumSamplingInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DeleteReverseReferences"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference">
+    <rdfs:subClassOf rdf:nodeID="A138"/>
+    <rdfs:subClassOf rdf:nodeID="A139"/>
+    <rdfs:subClassOf rdf:nodeID="A140"/>
+    <rdfs:subClassOf rdf:nodeID="A141"/>
+    <rdfs:subClassOf rdf:nodeID="A142"/>
+    <rdfs:subClassOf rdf:nodeID="A100"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TransactionId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TransactionId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMaskDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserWriteMask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifierDatatype">
+    <owl:equivalentClass rdf:nodeID="A147"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TransactionId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelTableEntry">
+    <rdfs:subClassOf rdf:nodeID="A150"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A151"/>
+    <rdfs:subClassOf rdf:nodeID="A61"/>
+    <rdfs:subClassOf rdf:nodeID="A146"/>
+    <rdfs:subClassOf rdf:nodeID="A152"/>
+    <rdfs:subClassOf rdf:nodeID="A153"/>
+    <rdfs:subClassOf rdf:nodeID="A19"/>
+    <rdfs:subClassOf rdf:nodeID="A126"/>
+    <rdfs:subClassOf rdf:nodeID="A154"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Historizing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DeleteReverseReferences"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsAbstract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatusList">
+    <rdfs:subClassOf rdf:nodeID="A104"/>
+    <rdfs:subClassOf rdf:nodeID="A163"/>
+    <rdfs:subClassOf rdf:nodeID="A164"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelTable">
+    <rdfs:subClassOf rdf:nodeID="A165"/>
+    <rdfs:subClassOf rdf:nodeID="A166"/>
+    <rdfs:subClassOf rdf:nodeID="A167"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BrowseName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Models">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd">
+    <rdfs:subClassOf rdf:nodeID="A160"/>
+    <rdfs:subClassOf rdf:nodeID="A169"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A170"/>
+    <rdfs:subClassOf rdf:nodeID="A171"/>
+    <rdfs:subClassOf rdf:nodeID="A136"/>
+    <rdfs:subClassOf rdf:nodeID="A172"/>
+    <rdfs:subClassOf rdf:nodeID="A111"/>
+    <rdfs:subClassOf rdf:nodeID="A173"/>
+    <rdfs:subClassOf rdf:nodeID="A174"/>
+    <rdfs:subClassOf rdf:nodeID="A149"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A175"/>
+    <rdfs:subClassOf rdf:nodeID="A90"/>
+    <rdfs:subClassOf rdf:nodeID="A45"/>
+    <rdfs:subClassOf rdf:nodeID="A176"/>
+    <rdfs:subClassOf rdf:nodeID="A144"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Translation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Definition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Node"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MethodDeclarationId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#References"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_2">
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AliasTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Aliases"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A180"/>
+    <rdfs:subClassOf rdf:nodeID="A44"/>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_3"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevelDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceChange"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensionsDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelUri"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensionsDatatype">
+    <owl:equivalentClass rdf:nodeID="A107"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicNameDatatype">
+    <owl:equivalentClass rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#QualifiedNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANodeSetChangesStatus">
+    <rdfs:subClassOf rdf:nodeID="A190"/>
+    <rdfs:subClassOf rdf:nodeID="A191"/>
+    <rdfs:subClassOf rdf:nodeID="A192"/>
+    <rdfs:subClassOf rdf:nodeID="A193"/>
+    <rdfs:subClassOf rdf:nodeID="A148"/>
+    <rdfs:subClassOf rdf:nodeID="A194"/>
+    <rdfs:subClassOf rdf:nodeID="A195"/>
+    <rdfs:subClassOf rdf:nodeID="A196"/>
+    <rdfs:subClassOf rdf:nodeID="A197"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A143"/>
+    <rdfs:subClassOf rdf:nodeID="A62"/>
+    <rdfs:subClassOf rdf:nodeID="A198"/>
+    <rdfs:subClassOf rdf:nodeID="A199"/>
+    <rdfs:subClassOf rdf:nodeID="A186"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Source"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ParentNodeId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataTypeDefinition"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Definition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfExtensions"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ArrayDimensions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANode">
+    <rdfs:subClassOf rdf:nodeID="A168"/>
+    <rdfs:subClassOf rdf:nodeID="A145"/>
+    <rdfs:subClassOf rdf:nodeID="A203"/>
+    <rdfs:subClassOf rdf:nodeID="A204"/>
+    <rdfs:subClassOf rdf:nodeID="A202"/>
+    <rdfs:subClassOf rdf:nodeID="A205"/>
+    <rdfs:subClassOf rdf:nodeID="A182"/>
+    <rdfs:subClassOf rdf:nodeID="A206"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A157"/>
+    <rdfs:subClassOf rdf:nodeID="A207"/>
+    <rdfs:subClassOf rdf:nodeID="A161"/>
+    <rdfs:subClassOf rdf:nodeID="A133"/>
+    <rdfs:subClassOf rdf:nodeID="A208"/>
+    <rdfs:subClassOf rdf:nodeID="A209"/>
+    <rdfs:subClassOf rdf:nodeID="A210"/>
+    <rdfs:subClassOf rdf:nodeID="A211"/>
+    <rdfs:subClassOf rdf:nodeID="A212"/>
+    <rdfs:subClassOf rdf:nodeID="A213"/>
+    <rdfs:subClassOf rdf:nodeID="A214"/>
+    <rdfs:subClassOf rdf:nodeID="A215"/>
+    <rdfs:subClassOf rdf:nodeID="A216"/>
+    <rdfs:subClassOf rdf:nodeID="A217"/>
+    <rdfs:subClassOf rdf:nodeID="A218"/>
+    <rdfs:subClassOf rdf:nodeID="A219"/>
+    <rdfs:subClassOf rdf:nodeID="A220"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsUnion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_3">
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A221">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ParentNodeId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Source"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A222">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserAccessLevel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserAccessLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToAdd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelUri"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Aliases">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A223">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Executable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AcceptAllOrNothing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A224">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ServerUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsAbstract"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A225"/>
+    <rdfs:subClassOf rdf:nodeID="A222"/>
+    <rdfs:subClassOf rdf:nodeID="A226"/>
+    <rdfs:subClassOf rdf:nodeID="A179"/>
+    <rdfs:subClassOf rdf:nodeID="A156"/>
+    <rdfs:subClassOf rdf:nodeID="A184"/>
+    <rdfs:subClassOf rdf:nodeID="A227"/>
+    <rdfs:subClassOf rdf:nodeID="A41"/>
+    <rdfs:subClassOf rdf:nodeID="A128"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:subClassOf rdf:nodeID="A188"/>
+    <rdfs:subClassOf rdf:nodeID="A58"/>
+    <rdfs:subClassOf rdf:nodeID="A110"/>
+    <rdfs:subClassOf rdf:nodeID="A177"/>
+    <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A103"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAInstance"/>
+    <rdfs:subClassOf rdf:nodeID="A121"/>
+    <rdfs:subClassOf rdf:nodeID="A228"/>
+    <rdfs:subClassOf rdf:nodeID="A101"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A229"/>
+    <rdfs:subClassOf rdf:nodeID="A230"/>
+    <rdfs:subClassOf rdf:nodeID="A39"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:nodeID="A123"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#StructureTranslationType">
+    <rdfs:subClassOf rdf:nodeID="A231"/>
+    <rdfs:subClassOf rdf:nodeID="A232"/>
+    <rdfs:subClassOf rdf:nodeID="A158"/>
+    <rdfs:subClassOf rdf:nodeID="A134"/>
+    <rdfs:subClassOf rdf:nodeID="A233"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A220">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatusList"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DisplayName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevelDatatype">
+    <owl:equivalentClass rdf:nodeID="A57"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsAbstract"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType">
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A234">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A235">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AcceptAllOrNothing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsOptional">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A236">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserExecutable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A237">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Documentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AliasTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Aliases"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AliasTable">
+    <rdfs:subClassOf rdf:nodeID="A105"/>
+    <rdfs:subClassOf rdf:nodeID="A238"/>
+    <rdfs:subClassOf rdf:nodeID="A239"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A240">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfExtensions">
+    <rdfs:subClassOf rdf:nodeID="A36"/>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A109"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DisplayName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon_1">
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsOptional"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelTableEntry"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Model"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subClassOf rdf:nodeID="A181"/>
+    <rdfs:subClassOf rdf:nodeID="A48"/>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A236"/>
+    <rdfs:subClassOf rdf:nodeID="A223"/>
+    <rdfs:subClassOf rdf:nodeID="A241"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A214">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMaskDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserWriteMask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UriTable">
+    <rdfs:subClassOf rdf:nodeID="A242"/>
+    <rdfs:subClassOf rdf:nodeID="A243"/>
+    <rdfs:subClassOf rdf:nodeID="A244"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A245">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#QualifiedNameDatatype">
+    <owl:equivalentClass rdf:nodeID="A162"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfReferences">
+    <rdfs:subClassOf rdf:nodeID="A246"/>
+    <rdfs:subClassOf rdf:nodeID="A247"/>
+    <rdfs:subClassOf rdf:nodeID="A155"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A248">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A213">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TransactionId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NamespaceUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeToDelete">
+    <rdfs:subClassOf rdf:nodeID="A159"/>
+    <rdfs:subClassOf rdf:nodeID="A135"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A247">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Locale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Model">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A232">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Node">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ModelTableEntry"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#RequiredModel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A216">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BrowseName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A231">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A249">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatusList"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A218">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A246">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DurationDatatype">
+    <owl:equivalentClass rdf:nodeID="A120"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariableType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A241">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Executable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ServerUris">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TransactionId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UriTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ServerUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#RequiredModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsForward">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MethodDeclarationId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRankDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAVariable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#QualifiedNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BrowseName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DisplayName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#PublicationDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A250">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Field"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ParentNodeId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Documentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ContainsNoLoops"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NamespaceUris">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DeleteReverseReferences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatusList"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsForward"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A251">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Symmetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Code"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#PublicationDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A229">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Symmetric"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAInstance">
+    <rdfs:subClassOf rdf:nodeID="A221"/>
+    <rdfs:subClassOf rdf:nodeID="A201"/>
+    <rdfs:subClassOf rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANode"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A219">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A243">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Uri"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdAlias">
+    <rdfs:subClassOf rdf:nodeID="A252"/>
+    <rdfs:subClassOf rdf:nodeID="A253"/>
+    <rdfs:subClassOf rdf:nodeID="A248"/>
+    <rdfs:subClassOf rdf:nodeID="A235"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A254">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatus"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Status"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A255">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Aliases"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A239">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdAlias"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Translation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#WriteMaskDatatype">
+    <owl:equivalentClass rdf:nodeID="A200"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsForward"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A225">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DurationDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MinimumSamplingInterval"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Anon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#EventNotifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A233">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicNameDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#SymbolicName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A256">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToChange">
+    <rdfs:subClassOf rdf:nodeID="A127"/>
+    <rdfs:subClassOf rdf:nodeID="A187"/>
+    <rdfs:subClassOf rdf:nodeID="A185"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A257">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UriTable"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NamespaceUris"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#PublicationDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#TranslationType">
+    <rdfs:subClassOf rdf:nodeID="A250"/>
+    <rdfs:subClassOf rdf:nodeID="A249"/>
+    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <rdfs:subClassOf rdf:nodeID="A113"/>
+    <rdfs:subClassOf rdf:nodeID="A89"/>
+    <rdfs:subClassOf rdf:nodeID="A256"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A258">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#BaseType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A259">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAObjectType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText">
+    <rdfs:subClassOf rdf:nodeID="A260"/>
+    <rdfs:subClassOf rdf:nodeID="A261"/>
+    <rdfs:subClassOf rdf:nodeID="A245"/>
+    <rdfs:subClassOf rdf:nodeID="A234"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A242">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Uri"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A228">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Historizing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A262">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfExtensions"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Status"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A238">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsForward"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A263">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LastModified"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A217">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Documentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeIdDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodeSetStatusList"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Aliases"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A264">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocaleDatatype">
+    <owl:equivalentClass rdf:nodeID="A237"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.srdc.com.tr/ontmalizer#hasValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToChange"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsOptional"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataTypeDefinition">
+    <rdfs:subClassOf rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A88"/>
+    <rdfs:subClassOf rdf:nodeID="A42"/>
+    <rdfs:subClassOf rdf:nodeID="A178"/>
+    <rdfs:subClassOf rdf:nodeID="A122"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdfs:subClassOf rdf:nodeID="A38"/>
+    <rdfs:subClassOf rdf:nodeID="A258"/>
+    <rdfs:subClassOf rdf:nodeID="A112"/>
+    <rdfs:subClassOf rdf:nodeID="A189"/>
+    <rdfs:subClassOf rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Model"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Executable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#CardinalityTypeDatatype">
+    <owl:equivalentClass rdf:nodeID="A137"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserWriteMask"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A215">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocalizedText"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ValueRank">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A265">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UADataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A227">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#AccessLevelDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserAccessLevel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A261">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Locale"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#DataType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A253">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#IsForward"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ContainsNoLoops">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#NodesToAdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Version">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfReferences"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#References"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ListOfExtensions"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Extensions"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A266">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Code"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToDelete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A230">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Symmetric"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2147483647</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Model"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UANodeSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A183"/>
+    <rdfs:subClassOf rdf:nodeID="A264"/>
+    <rdfs:subClassOf rdf:nodeID="A259"/>
+    <rdfs:subClassOf rdf:nodeID="A257"/>
+    <rdfs:subClassOf rdf:nodeID="A255"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:nodeID="A262"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A106"/>
+    <rdfs:subClassOf rdf:nodeID="A266"/>
+    <rdfs:subClassOf rdf:nodeID="A59"/>
+    <rdfs:subClassOf rdf:nodeID="A108"/>
+    <rdfs:subClassOf rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:nodeID="A254"/>
+    <rdfs:subClassOf rdf:nodeID="A49"/>
+    <rdfs:subClassOf rdf:nodeID="A240"/>
+    <rdfs:subClassOf rdf:nodeID="A124"/>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A98"/>
+    <rdfs:subClassOf rdf:nodeID="A265"/>
+    <rdfs:subClassOf rdf:nodeID="A43"/>
+    <rdfs:subClassOf rdf:nodeID="A263"/>
+    <rdfs:subClassOf rdf:nodeID="A99"/>
+    <rdfs:subClassOf rdf:nodeID="A224"/>
+    <rdfs:subClassOf rdf:nodeID="A251"/>
+    <rdfs:subClassOf rdf:nodeID="A114"/>
+    <rdfs:subClassOf rdf:nodeID="A115"/>
+    <rdfs:subClassOf rdf:nodeID="A267"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Category">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UserExecutable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A244">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Uri"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#ReferencesToDelete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A252">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Alias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A267">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#UAReferenceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#References">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A226">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#MinimumSamplingInterval"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A260">
+    <owl:allValuesFrom rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#LocaleDatatype"/>
+    <owl:onProperty rdf:resource="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#Locale"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>
