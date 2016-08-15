@@ -82,7 +82,7 @@ class elementList {
 
 
 @Path("/ontologies")
-public class Endpoints {
+public class RDFStore {
 
     private static Boolean validateXML(InputStream XMLSchema, InputStream XMLInstance) {
 
