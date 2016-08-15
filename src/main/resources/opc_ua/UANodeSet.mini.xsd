@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema
     targetNamespace="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd"
     elementFormDefault="qualified"
@@ -49,20 +49,6 @@
     </xs:sequence>
   </xs:complexType>
 
-
-
-
-
-
-
-  <xs:simpleType name="NodeId">
-    <xs:restriction base="xs:string"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="QualifiedName">
-    <xs:restriction base="xs:string"></xs:restriction>
-  </xs:simpleType>
-
   <xs:complexType name="NodeIdAlias">
     <xs:simpleContent>
       <xs:extension base="NodeId">
@@ -71,86 +57,13 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="AliasTable">
-    <xs:sequence>
-      <xs:element name="Alias" type="NodeIdAlias" minOccurs="0" maxOccurs="unbounded"></xs:element>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:simpleType name="Locale">
+  <xs:simpleType name="NodeId">
     <xs:restriction base="xs:string"></xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="LocalizedText">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="Locale" type="Locale" default=""></xs:attribute>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:simpleType name="WriteMask">
-    <xs:restriction base="xs:unsignedInt"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="EventNotifier">
-    <xs:restriction base="xs:unsignedByte"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ValueRank">
-    <xs:restriction base="xs:int"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ArrayDimensions">
-    <xs:list>
-      <xs:simpleType>
-        <xs:restriction base="xs:token">
-          <xs:pattern value="([0-9]*,|[0-9]*)*"></xs:pattern>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:list>
-  </xs:simpleType>
-
-  <xs:simpleType name="SymbolicName">
-    <xs:list>
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:pattern value="(\p{L})(\p{L}|\p{N}|_)*"></xs:pattern>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:list>
-  </xs:simpleType>
-
-  <xs:simpleType name="CardinalityType">
-    <xs:list>
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:pattern value="(\p{N})*|unbounded"></xs:pattern>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:list>
-  </xs:simpleType>
-
-  <xs:simpleType name="Duration">
-    <xs:restriction base="xs:double"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="AccessLevel">
-    <xs:restriction base="xs:unsignedByte"></xs:restriction>
-  </xs:simpleType>
-
-  <xs:complexType name="Reference">
-    <xs:simpleContent>
-      <xs:extension base="NodeId">
-        <xs:attribute name="ReferenceType" type="NodeId" use="required"></xs:attribute>
-        <xs:attribute name="IsForward" type="xs:boolean" default="true"></xs:attribute>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="ListOfReferences">
+  <xs:complexType name="AliasTable">
     <xs:sequence>
-      <xs:element name="Reference" type="Reference" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Alias" type="NodeIdAlias" minOccurs="0" maxOccurs="unbounded"></xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -166,20 +79,12 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="UANode">
-    <xs:sequence>
-      <xs:element name="DisplayName" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
-      <xs:element name="Description" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
-      <xs:element name="Category" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
-      <xs:element name="Documentation" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
-      <xs:element name="References" type="ListOfReferences" minOccurs="0"></xs:element>
-      <xs:element name="Extensions" type="ListOfExtensions" minOccurs="0"></xs:element>
-    </xs:sequence>
-    <xs:attribute name="NodeId" type="NodeId" use="required"></xs:attribute>
-    <xs:attribute name="BrowseName" type="QualifiedName" use="required"></xs:attribute>
-    <xs:attribute name="WriteMask" type="WriteMask" default="0"></xs:attribute>
-    <xs:attribute name="UserWriteMask" type="WriteMask" default="0"></xs:attribute>
-    <xs:attribute name="SymbolicName" type="SymbolicName" use="optional"></xs:attribute>
+  <xs:complexType name="UAObject">
+    <xs:complexContent>
+      <xs:extension base="UAInstance">
+        <xs:attribute name="EventNotifier" type="EventNotifier" default="0"></xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="UAInstance">
@@ -190,13 +95,9 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="UAObject">
-    <xs:complexContent>
-      <xs:extension base="UAInstance">
-        <xs:attribute name="EventNotifier" type="EventNotifier" default="0"></xs:attribute>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
+  <xs:simpleType name="EventNotifier">
+    <xs:restriction base="xs:unsignedByte"></xs:restriction>
+  </xs:simpleType>
 
   <xs:complexType name="UAVariable">
     <xs:complexContent>
@@ -222,6 +123,54 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="TranslationType">
+    <xs:choice minOccurs="0">
+      <xs:element name="Text" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Field" type="StructureTranslationType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="LocalizedText">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Locale" type="Locale" default=""></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="StructureTranslationType">
+    <xs:sequence>
+      <xs:element name="Text" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="Locale">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ValueRank">
+    <xs:restriction base="xs:int"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ArrayDimensions">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="([0-9]*,|[0-9]*)*"></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+
+  <xs:simpleType name="AccessLevel">
+    <xs:restriction base="xs:unsignedByte"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Duration">
+    <xs:restriction base="xs:double"></xs:restriction>
+  </xs:simpleType>
+
   <xs:complexType name="UAMethod">
     <xs:complexContent>
       <xs:extension base="UAInstance">
@@ -230,20 +179,6 @@
         <xs:attribute name="MethodDeclarationId" type="NodeId" use="optional"></xs:attribute>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="TranslationType">
-    <xs:choice minOccurs="0">
-      <xs:element name="Text" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
-      <xs:element name="Field" type="StructureTranslationType" minOccurs="0" maxOccurs="unbounded"></xs:element>
-    </xs:choice>
-  </xs:complexType>
-
-  <xs:complexType name="StructureTranslationType">
-    <xs:sequence>
-      <xs:element name="Text" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
-    </xs:sequence>
-    <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="UAView">
@@ -255,6 +190,12 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="UAObjectType">
+    <xs:complexContent>
+      <xs:extension base="UAType"></xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
   <xs:complexType name="UAType">
     <xs:complexContent>
       <xs:extension base="UANode">
@@ -263,10 +204,35 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="UAObjectType">
-    <xs:complexContent>
-      <xs:extension base="UAType"></xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="UANode">
+    <xs:sequence>
+      <xs:element name="DisplayName" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Description" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Category" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      <xs:element name="Documentation" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="References" type="ListOfReferences" minOccurs="0"></xs:element>
+      <xs:element name="Extensions" type="ListOfExtensions" minOccurs="0"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="NodeId" type="NodeId" use="required"></xs:attribute>
+    <xs:attribute name="BrowseName" type="QualifiedName" use="required"></xs:attribute>
+    <xs:attribute name="WriteMask" type="WriteMask" default="0"></xs:attribute>
+    <xs:attribute name="UserWriteMask" type="WriteMask" default="0"></xs:attribute>
+    <xs:attribute name="SymbolicName" type="SymbolicName" use="optional"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ListOfReferences">
+    <xs:sequence>
+      <xs:element name="Reference" type="Reference" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Reference">
+    <xs:simpleContent>
+      <xs:extension base="NodeId">
+        <xs:attribute name="ReferenceType" type="NodeId" use="required"></xs:attribute>
+        <xs:attribute name="IsForward" type="xs:boolean" default="true"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
 
   <xs:complexType name="UAVariableType">
@@ -298,6 +264,35 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <xs:complexType name="UAReferenceType">
+    <xs:complexContent>
+      <xs:extension base="UAType">
+        <xs:sequence>
+          <xs:element name="InverseName" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="Symmetric" type="xs:boolean" default="false"></xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="QualifiedName">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="WriteMask">
+    <xs:restriction base="xs:unsignedInt"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SymbolicName">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(\p{L})(\p{L}|\p{N}|_)*"></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+
   <xs:complexType name="DataTypeDefinition">
     <xs:sequence>
       <xs:element name="Field" type="DataTypeField" minOccurs="0" maxOccurs="unbounded"></xs:element>
@@ -319,17 +314,6 @@
     <xs:attribute name="ValueRank" type="ValueRank" default="-1"></xs:attribute>
     <xs:attribute name="Value" type="xs:int" default="-1"></xs:attribute>
     <xs:attribute name="IsOptional" type="xs:boolean" use="optional" default="false"></xs:attribute>
-  </xs:complexType>
-
-  <xs:complexType name="UAReferenceType">
-    <xs:complexContent>
-      <xs:extension base="UAType">
-        <xs:sequence>
-          <xs:element name="InverseName" type="LocalizedText" minOccurs="0" maxOccurs="unbounded"></xs:element>
-        </xs:sequence>
-        <xs:attribute name="Symmetric" type="xs:boolean" default="false"></xs:attribute>
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>
 
 </xs:schema>

@@ -21,15 +21,17 @@ public class XSD2OWL {
     public void createOPCUAOntology() {
 
         // This part converts XML schema to OWL ontology.
-        XSD2OWLMapper mapping = new XSD2OWLMapper(new File("OPC_UA/UANodeSet.xsd"));
-        mapping.setObjectPropPrefix("");
-        mapping.setDataTypePropPrefix("");
+        XSD2OWLMapper mapping = new XSD2OWLMapper(new File("/Users/shinho/Workspace/UniBonn/2016_SS/SDWLab/Semantify.io-jena/src/main/resources/opc_ua/UANodeSet.mini.xsd"));
+//        XSD2OWLMapper mapping = new XSD2OWLMapper(new File("/Users/shinho/Workspace/UniBonn/2016_SS/SDWLab/Semantify.io-jena/src/main/resources/opc_ua/UANodeSet.minimized_test.xsd"));
+        mapping.setObjectPropPrefix("has");
+        mapping.setDataTypePropPrefix("attr");
         mapping.convertXSD2OWL();
 
         // This part prints the ontology to the specified file.
         FileOutputStream ont;
         try {
-            File f = new File("output/UANodeSet.n3");
+            File f = new File("/Users/shinho/Workspace/UniBonn/2016_SS/SDWLab/Semantify.io-jena/src/main/resources/output/UANodeSet.mini.ttl");
+//            File f = new File("/Users/shinho/Workspace/UniBonn/2016_SS/SDWLab/Semantify.io-jena/src/main/resources/output/UANodeSet.minimized_test.ttl");
             f.getParentFile().mkdirs();
             ont = new FileOutputStream(f);
             mapping.writeOntology(ont, "N3");

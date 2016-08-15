@@ -30,21 +30,15 @@
                     owl:maxCardinality "1"^^xsd:int ;
                     owl:onProperty :hasExtensions
                   ] ;
+
     rdfs:subClassOf
                   [ a       owl:Restriction ;
                     owl:maxCardinality "1"^^xsd:int ;
-                    owl:onProperty :attrLastModified
+                    owl:onProperty :LastModified
                   ] .
 
-
-:UriTable a owl:Class.
-
-:hasUri a owl:DatatypeProperty;
-    rdfs:domain :UriTable;
-    rdfs:range xsd:string.
-
 :hasNamespaceUris  a   owl:ObjectProperty;
-                rdfs:domain :UANodeSet, :UANodeSetChanges ;
+                rdfs:domain :UANodeSet;
                 rdfs:range :UriTable .
 
 :hasServerUris a   owl:ObjectProperty;
@@ -55,92 +49,142 @@
         rdfs:domain :UANodeSet ;
         rdfs:range :ModelTable .
 
-:ModelTable a owl:Class.
-
-:hasModel a owl:ObjectProperty;
-        rdfs:domain :ModelTable ;
-        rdfs:range :ModelTableEntry .
-
 :hasAliases a   owl:ObjectProperty;
         rdfs:domain :UANodeSet ;
         rdfs:range :AliasTable .
-
-:AliasTable a owl:Class.
 
 :hasExtensions a   owl:ObjectProperty;
         rdfs:domain :UANodeSet ;
         rdfs:range :ListOfExtensions .
 
-:ListOfExtensions a owl:Class.
-
 :hasUAObject a  owl:ObjectProperty;
              rdfs:domain :UANodeSet ;
              rdfs:range :UAObject .
 
-:UAObject a owl:Class.
-
 :hasUAVariable a  owl:ObjectProperty;
-             rdfs:domain :UANodeSet ;
-             rdfs:range :UAVariable .
-
-:UAVariable a owl:Class.
+            rdfs:domain :UANodeSet ;
+            rdfs:range :UAVariable .
 
 :hasUAMethod a  owl:ObjectProperty;
              rdfs:domain :UANodeSet ;
              rdfs:range :UAMethod .
 
-:UAMethod a owl:Class.
-
 :hasUAView a  owl:ObjectProperty;
-             rdfs:domain :UANodeSet ;
-             rdfs:range :UAView .
-
-:UAView a owl:Class.
+          rdfs:domain :UANodeSet ;
+          rdfs:range :UAView .
 
 :hasUAObjectType a  owl:ObjectProperty;
              rdfs:domain :UANodeSet ;
              rdfs:range :UAObjectType .
 
-:UAObjectType a owl:Class.
-
 :hasUAVariableType a  owl:ObjectProperty;
-             rdfs:domain :UANodeSet ;
-             rdfs:range :UAVariableType .
-
-:UAVariableType a owl:Class.
+            rdfs:domain :UANodeSet ;
+            rdfs:range :UAVariableType .
 
 :hasUADataType a  owl:ObjectProperty;
-             rdfs:domain :UANodeSet ;
-             rdfs:range :UADataType .
-
-:UADataType a owl:Class.
+           rdfs:domain :UANodeSet ;
+           rdfs:range :UADataType .
 
 :hasUAReferenceType a  owl:ObjectProperty;
-             rdfs:domain :UANodeSet ;
-             rdfs:range :UAReferenceType .
+            rdfs:domain :UANodeSet ;
+            rdfs:range :UAReferenceType .
 
-:UAReferenceType a owl:Class.
+:LastModified a owl:DatatypeProperty;
+              rdfs:domain :UANodeSet ;
+              rdfs:range xsd:dateTime .
 
-:attrLastModified a owl:DatatypeProperty;
-    rdfs:domain :UANodeSet ;
-    rdfs:range xsd:dateTime .
+:UriTable a owl:Class.
+:hasUri a owl:ObjectProperty;
+      rdfs:domain :UriTable;
+      rdfs:range xsd:string.
 
+:ModelTable a owl:Class.
+:hasModel a owl:ObjectProperty;
+        rdfs:domain :ModelTable ;
+        rdfs:range :ModelTableEntry .
 :ModelTableEntry a owl:Class.
-
 :hasRequiredModel a owl:ObjectProperty;
                 rdfs:domain :ModelTableEntry ;
                 rdfs:range :ModelTableEntry .
-
-:attrModelUri   a owl:DatatypeProperty;
-                rdfs:domain :ModelTableEntry ;
-                rdfs:range xsd:string .
-
-:attrVersion   a owl:DatatypeProperty;
-                rdfs:domain :ModelTableEntry ;
-                rdfs:range xsd:string .
-
-:attrPublicationDate   a owl:DatatypeProperty;
+:ModelUri   a owl:DatatypeProperty;
+            rdfs:domain :ModelTableEntry ;
+            rdfs:range xsd:string .
+:Version   a owl:DatatypeProperty;
+            rdfs:domain :ModelTableEntry ;
+            rdfs:range xsd:string .
+:PublicationDate   a owl:DatatypeProperty;
                 rdfs:domain :ModelTableEntry ;
                 rdfs:range xsd:dateTime .
 
-:NodeId         a owl:Class.
+
+
+
+:AliasTable a owl:Class.
+:ListOfExtensions a owl:Class.
+:UAObject a owl:Class.
+:UAVariable a owl:Class.
+:UAMethod a owl:Class.
+:UAView a owl:Class.
+:UAObjectType a owl:Class.
+:UAVariableType a owl:Class.
+:UADataType a owl:Class.
+:UAReferenceType a owl:Class.
+
+
+:NodeIdAlias a owl:Class
+            rdfs:subClassOf
+                    [ a       owl:Restriction ;
+                      owl:maxCardinality "1"^^xsd:int ;
+                      owl:onProperty :NodeId
+                    ] ;
+            rdfs:subClassOf
+                    [ a       owl:Restriction ;
+                      owl:maxCardinality "1"^^xsd:int ;
+                      owl:onProperty :Alias
+                    ] .
+:NodeId   a owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+:Alias   a owl:DatatypeProperty ;
+        rdfs:domain :NodeIdAlias ;
+        rdfs:range xsd:string .
+:hasAlias  a owl:ObjectProperty;
+        rdfs:domain :AliasTable ;
+        rdfs:range :NodeIdAlias .
+
+:hasExtension a owl:ObjectProperty
+        rdfs:domain :ListOfExtensions;
+        rdfs:range :Anon_2
+.
+========================
+
+
+
+
+
+
+
+
+:QualifiedName a owl:DatatypeProperty;
+        rdfs:range xsd:string .
+
+
+
+
+
+
+
+
+
+
+:hasUri a owl:DatatypeProperty;
+    rdfs:domain :UriTable;
+    rdfs:range xsd:string.
+
+
+
+:Locale a owl:Class.
+:LocalizedText a owl:Class.
+:WriteMask a owl:Class.
+:EventNotifier a owl:Class.
+:ValueRank a owl:Class.
+:ArrayDimensions a owl:Class.

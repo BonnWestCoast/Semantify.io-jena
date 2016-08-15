@@ -193,27 +193,26 @@ public class XSD2OWLMapper {
         String URI = getURI(simple);
 
         if (simple.isGlobal()) {
-            // TODO: Mustafa: Why would we define new simple types in the XSD namespace?
             // The following if should not evaluate to true...
             if (NS.equals(XSD.getURI())) {
                 // If element type is an XSD datatype
                 // An example case:
                 // <xs:element name="test" type="xs:string" />
-
                 OntClass dataType = ontology.createOntResource(OntClass.class,
                         RDFS.Datatype,
                         parentURI + Constants.DATATYPE_SUFFIX);
 
                 // Set super class to the element type
                 Resource xsdResource = XSDUtil.getXSDResource(simple.getName());
-                dataType.addSuperClass(xsdResource);
+                dataType.addProperty(OWL2.onDatatype, xsdResource);
+//                dataType.addSuperClass(xsdResource);
 
                 // Set Equivalent Datatype
-                OntClass eqDataType = ontology.createOntResource(OntClass.class,
-                        RDFS.Datatype,
-                        null);
-                eqDataType.addProperty(OWL2.onDatatype, xsdResource);
-                dataType.addEquivalentClass(eqDataType);
+//                OntClass eqDataType = ontology.createOntResource(OntClass.class,
+//                        RDFS.Datatype,
+//                        null);
+//                eqDataType.addProperty(OWL2.onDatatype, xsdResource);
+//                dataType.addEquivalentClass(eqDataType);
 
                 addTextAnnotation(simple, dataType);
                 return dataType;
@@ -245,12 +244,14 @@ public class XSD2OWLMapper {
                     }
 
                     if (!insertedBefore) {
-                        datatype.addSuperClass(onDatatype);
-                        OntClass equivClass = ontology.createOntResource(OntClass.class,
-                                RDFS.Datatype,
-                                null);
-                        equivClass.addProperty(OWL2.onDatatype, onDatatype);
-                        datatype.addEquivalentClass(equivClass);
+                        datatype.addProperty(OWL2.onDatatype, onDatatype);
+//                        datatype.addSuperClass(onDatatype);
+
+//                        OntClass equivClass = ontology.createOntResource(OntClass.class,
+//                                RDFS.Datatype,
+//                                null);
+//                        equivClass.addProperty(OWL2.onDatatype, onDatatype);
+//                        datatype.addEquivalentClass(equivClass);
                     }
                 }
 
@@ -276,12 +277,13 @@ public class XSD2OWLMapper {
     }
 
     private OntClass convertListOrUnion(String URI) {
+        // TODO Find out a way to present "SymbolicName", "ArrayDimensions"
         OntClass dataType = ontology.createOntResource(OntClass.class,
                 RDFS.Datatype,
                 URI + Constants.DATATYPE_SUFFIX);
 
         Resource anySimpleType = ontology.getResource(XSD.getURI() + "anySimpleType");
-        dataType.addSuperClass(anySimpleType);
+//        dataType.addSuperClass(anySimpleType);
 
         OntClass eqDataType = ontology.createOntResource(OntClass.class,
                 RDFS.Datatype,
@@ -366,18 +368,19 @@ public class XSD2OWLMapper {
         }
         // I did not use getResource methods because the class I am looking for may not be created yet.
 
-        datatype.addSuperClass(onDatatype);
+        datatype.addProperty(OWL2.onDatatype, onDatatype);
+//        datatype.addSuperClass(onDatatype);
 
-        OntClass equivClass = ontology.createOntResource(OntClass.class,
-                RDFS.Datatype,
-                null);
-        equivClass.addProperty(OWL2.onDatatype, onDatatype);
+//        OntClass equivClass = ontology.createOntResource(OntClass.class,
+//                RDFS.Datatype,
+//                null);
+//        equivClass.addProperty(OWL2.onDatatype, onDatatype);
 
-        RDFList list = getFacetList(facets, restriction);
-        if (list != null) {
-            equivClass.addProperty(OWL2.withRestrictions, list);
-        }
-        datatype.addEquivalentClass(equivClass);
+//        RDFList list = getFacetList(facets, restriction);
+//        if (list != null) {
+//            equivClass.addProperty(OWL2.withRestrictions, list);
+//        }
+//        datatype.addEquivalentClass(equivClass);
 
         // If an enumeration facet is available, then we also generate an OWL:Class containing the EnumeratedValues.
         if (facets.enumeration != null) {
@@ -425,9 +428,9 @@ public class XSD2OWLMapper {
                             hasValue,
                             ontology.getOntResource(baseURI + Constants.DATATYPE_SUFFIX)));
                 }
-                complexClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
-                        hasValue,
-                        1));
+//                complexClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
+//                        hasValue,
+//                        1));
             }
 
             Iterator<? extends XSAttributeUse> attributeUses = complex.getAttributeUses().iterator();
@@ -616,7 +619,6 @@ public class XSD2OWLMapper {
                 } else if (element.getType().isComplexType()) {
                     prop = ontology.createObjectProperty(mainURI + "#" + NamingUtil.createPropertyName(opprefix, element.getName()));
 
-                    // TODO: Mustafa: How will this be possible?
                     if (element.getType().getTargetNamespace().equals(XSDDatatype.XSD)) {
                         if (element.getType().getName().equals("anyType")) {
                             parent.addSuperClass(ontology.createAllValuesFromRestriction(null,
