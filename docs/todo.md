@@ -10,4 +10,5 @@
 ### rules
 
 * maxOccurs, minOccurs: default = 1
-* 
+*
+* base => class
