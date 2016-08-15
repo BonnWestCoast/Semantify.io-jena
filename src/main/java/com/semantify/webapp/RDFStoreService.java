@@ -79,10 +79,10 @@ class elementList {
 
 }
 
-
-
 @Path("/ontologies")
-public class RDFStore {
+public class RDFStoreService {
+
+    private static String path = "";
 
     private static Boolean validateXML(InputStream XMLSchema, InputStream XMLInstance) {
 
@@ -124,12 +124,14 @@ public class RDFStore {
     }
 
     private static int storeOntology(String ontology) {
+
         int ontologyID = 0;
         /*
          decide which is better here if it is better to pass an string, a path of file name or a File object or an
          InputStream
          */
         return ontologyID;
+
     }
 
     private static int handleOntology(InputStream schemaInputStream, InputStream instanceInputStream) {
@@ -189,7 +191,6 @@ public class RDFStore {
     }
 
     @GET
-    @Path("/list")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage() {
@@ -202,13 +203,13 @@ public class RDFStore {
     }
 
     @GET
-    @Path("/load/{id}")
+    @Path("/{id}")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage(
             @PathParam("id") String id
     ) {
-        DBController query = new DBController();
+        //DBController query = new DBController();
         Element element = new Element();
         String json = new Gson().toJson(element);
         return Response.status(200).entity(json).build();
