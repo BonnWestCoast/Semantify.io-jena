@@ -291,7 +291,10 @@ public class XML2OWLMapper {
                 }
             }
 
-            traverseAttributes(node, object, objectType.getResource());
+            // SHINHO
+            if (object != null) {
+                traverseAttributes(node, object, objectType.getResource());
+            }
 
         } // This case is only valid for instances of mixed classes
         else if (node.getNodeType() == Node.TEXT_NODE) {

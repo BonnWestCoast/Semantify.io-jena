@@ -7,6 +7,7 @@ import org.apache.jena.ontology.*;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFList;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.OWL2;
@@ -147,10 +148,20 @@ public class XSD2OWLMapper {
 
         ontology.setNsPrefix("", mainURI + "#");
 
-        hasValue = ontology.createProperty(Constants.ONTMALIZER_VALUE_PROP_NAME);
+        hasValue = ontology.createOntProperty(Constants.ONTMALIZER_VALUE_PROP_NAME);
 
         abstractClasses = new ArrayList<>();
         mixedClasses = new ArrayList<>();
+    }
+
+    public void setNsPrefix(String prefix) {
+
+        ontology.setNsPrefix(prefix, mainURI + "#");
+        ontology.removeNsPrefix("");
+    }
+
+    public void importOntology(InputStream isOnt) {
+        ontology.read(isOnt, null, "N3");
     }
 
     /**
@@ -204,8 +215,7 @@ public class XSD2OWLMapper {
 
                 // Set super class to the element type
                 Resource xsdResource = XSDUtil.getXSDResource(simple.getName());
-                dataType.addProperty(OWL2.onDatatype, xsdResource);
-//                dataType.addSuperClass(xsdResource);
+                dataType.addSuperClass(xsdResource);
 
                 // Set Equivalent Datatype
 //                OntClass eqDataType = ontology.createOntResource(OntClass.class,
@@ -244,9 +254,7 @@ public class XSD2OWLMapper {
                     }
 
                     if (!insertedBefore) {
-                        datatype.addProperty(OWL2.onDatatype, onDatatype);
-//                        datatype.addSuperClass(onDatatype);
-
+                        datatype.addSuperClass(onDatatype);
 //                        OntClass equivClass = ontology.createOntResource(OntClass.class,
 //                                RDFS.Datatype,
 //                                null);
@@ -307,9 +315,9 @@ public class XSD2OWLMapper {
             enumClass.addSuperClass(ontology.createAllValuesFromRestriction(null,
                     hasValue,
                     XSDUtil.getXSDResource(base.getName())));
-            enumClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
-                    hasValue,
-                    1));
+//            enumClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
+//                    hasValue,
+//                    1));
         } else {
             enumClass.addSuperClass(ontology.createClass(baseURI));
         }
@@ -659,7 +667,13 @@ public class XSD2OWLMapper {
                 int maxOccurs = p.getMaxOccurs().intValue();
                 if (maxOccurs == 1) {
                     if (minOccurs == 1) {
-                        parent.addSuperClass(ontology.createCardinalityRestriction(null, prop, 1));
+                        // sub tag of choice which has minOccurs="0" maxOccurs="unbounded" -> handle properly
+                        if (group.getCompositor().toString() == "choice") {
+
+                        }
+                        else {
+                            parent.addSuperClass(ontology.createCardinalityRestriction(null, prop, 1));
+                        }
                     } else // minOccurs can be 0 in this case, logically
                     {
                         parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, 1));
@@ -667,7 +681,8 @@ public class XSD2OWLMapper {
                 } else {
                     parent.addSuperClass(ontology.createMinCardinalityRestriction(null, prop, minOccurs));
                     if (maxOccurs == -1) {
-                        parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, Integer.MAX_VALUE));
+                        // maxOccurs = "unbounded"
+                        //parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, Integer.MAX_VALUE));
                     } else {
                         parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, maxOccurs));
                     }
