@@ -4,6 +4,7 @@ import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.tdb.TDBFactory;
 
+import java.io.*;
 import java.util.*;
 
 public class RDFStoreController {
@@ -62,7 +63,7 @@ public class RDFStoreController {
     /**
      * Auxiliar method to create dummy model examples
      */
-    private void fillDataset( RDFStoreController storeController ) {
+    public void fillDataset( RDFStoreController storeController ) {
 
         Map<String, String> dictionary = new HashMap<String, String>();
 
@@ -113,20 +114,26 @@ public class RDFStoreController {
      * @param nameSchema
      * @return m, the model
      */
-    public Model getSchemaByName(String nameSchema) {
+    public String getSchemaByName(String nameSchema) {
 
         Model m = null;
+        String modelContent = "";
         dataset.begin(ReadWrite.READ);
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
 
         try {
+
             m = dataset.getNamedModel(nameSchema);
+            m.write(os);
+            modelContent = new String(os.toByteArray(),"UTF-8");
+
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());
         } finally {
             dataset.end();
         }
 
-        return m;
+        return modelContent;
 
     }
 
@@ -137,6 +144,7 @@ public class RDFStoreController {
     public List<String> listOntologies() {
 
         List<String> ontologies = new ArrayList<String>();
+        ontologies = new ArrayList<String>();
 
         dataset.begin(ReadWrite.READ);
 
@@ -146,8 +154,8 @@ public class RDFStoreController {
 
             while ( list.hasNext() ) {
                 String modelName = (String) list.next();
-                //imprime(modelName);
-                ontologies.add( modelName );
+                imprime(modelName);
+                ontologies.add(modelName);
             }
 
         } catch (Exception e) {
