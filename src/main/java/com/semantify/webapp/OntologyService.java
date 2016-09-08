@@ -5,14 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.MediaType;
-
 import com.google.gson.Gson;
-import org.apache.jena.rdf.model.Model;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
 @Path("/ontologies")
 public class OntologyService {
-
-    private static String path = "";
 
     @GET
     @Consumes(MediaType.MULTIPART_FORM_DATA)
@@ -31,6 +28,33 @@ public class OntologyService {
         }
 
         String json = new Gson().toJson(new elementList(list));
+        return Response.status(200).entity(json).build();
+
+    }
+
+
+    /**
+     *
+     * @param ontology
+     * @param query
+     * @return
+     */
+    @POST
+    @Path("/query/{id}")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getMessage(
+        @FormDataParam("id") String ontology,
+        @FormDataParam("query") String query
+    ) {
+
+        RDFStoreController controller = new RDFStoreController();
+        String queryResult = controller.queryOntology(ontology, query);
+        System.out.println(queryResult) ;
+
+        Success success = new Success(queryResult);
+
+        String json = new Gson().toJson(success);
         return Response.status(200).entity(json).build();
 
     }

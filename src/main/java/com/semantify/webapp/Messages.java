@@ -10,11 +10,16 @@ class Success {
 
     int ontologyID;
     boolean success = true;
+    String result = "";
 
     public Success () {}
 
     public Success(int ontologyID) {
         this.ontologyID = ontologyID;
+    }
+
+    public Success(String result) {
+        this.result = result;
     }
 
 }

@@ -87,9 +87,10 @@ public class RDFStoreController {
      * @param nameSchema is the schema where we want to execute the query
      * @param queryString is the value of the query
      */
-    public void queryOntology(String nameSchema, String queryString) {
+    public String queryOntology(String nameSchema, String queryString) {
 
         Model model = null;
+        String stringResult = "";
         dataset.begin(ReadWrite.READ);
 
         try {
@@ -97,8 +98,11 @@ public class RDFStoreController {
             model = dataset.getNamedModel(nameSchema);
             Query query = QueryFactory.create(queryString);
             QueryExecution qe = QueryExecutionFactory.create(query, model);
+
             ResultSet rs = qe.execSelect();
-            ResultSetFormatter.out(System.out, rs, query);
+            //ResultSetFormatter.out(System.out, rs, query);
+            stringResult = ResultSetFormatter.asText(rs, query);
+
             qe.close();
 
         } catch (Exception e) {
@@ -106,6 +110,8 @@ public class RDFStoreController {
         } finally {
             dataset.end();
         }
+
+        return stringResult ;
 
     }
 
