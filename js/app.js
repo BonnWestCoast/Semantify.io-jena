@@ -5,7 +5,7 @@ var request = require('request');
 var fs = require('fs');
 var url = 'http://localhost:8080/rest/instance/new'
 
-req = request.post(
+var req = request.post(
         url,
         function (error, response, body) {
 
