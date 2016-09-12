@@ -23,16 +23,10 @@ public class RDFStoreController {
 
         /* fill the dataset */
         //storeController.fillDataset(storeController);
-
-        /* query section */
-        String query = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
-                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
-                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
-                "select * " +
-                "where { ?a ?b ?c }";
-
         //storeController.queryOntology("product", query);
         storeController.listOntologies();
+        storeController.getSchemaByName("tbox");
+        //storeController.getSchemaByName("xobt");
         //storeController.cleanDataset();
 
     }
@@ -124,14 +118,22 @@ public class RDFStoreController {
 
         Model m = null;
         String modelContent = "";
-        dataset.begin(ReadWrite.READ);
         ByteArrayOutputStream os = new ByteArrayOutputStream();
+
+        dataset.begin(ReadWrite.READ);
 
         try {
 
-            m = dataset.getNamedModel(nameSchema);
-            m.write(os);
-            modelContent = new String(os.toByteArray(),"UTF-8");
+            if ( dataset.containsNamedModel(nameSchema) ) {
+
+                m = dataset.getNamedModel(nameSchema);
+                System.out.println();
+                m.write(os);
+                modelContent = new String(os.toByteArray());
+
+            } else {
+                System.out.println("The model does not exist");
+            }
 
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());

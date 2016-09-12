@@ -31,12 +31,8 @@ public class SemantifyService {
             @FormDataParam("instance") FormDataContentDisposition instanceFileName
     ) {
 
-        //String fileLocation = schemaFileName.getFileName();
-        //DBController objectController = new DBController();
-        //objectController.storeFile(schemaInputStream, instanceFileName);
-
         boolean areValidXML = validateXML(schemaInputStream, instanceInputStream);
-        int idOntology = -1;
+        String idOntology = "";
 
         if (areValidXML) {
 
@@ -94,10 +90,10 @@ public class SemantifyService {
         return isValid;
     }
 
-    private static int handleOntology(InputStream schemaInputStream, InputStream instanceInputStream) {
+    private static String handleOntology(InputStream schemaInputStream, InputStream instanceInputStream) {
 
-        int idSchema = 0;
-        int idInstance = 0;
+        String idSchema = "";
+        String idInstance = "";
         List<String> ontologies =  null;
         ontologies = convertOntology(schemaInputStream, instanceInputStream);
 
@@ -113,6 +109,8 @@ public class SemantifyService {
             idInstance = storeOntology(instance);
         }
         */
+
         return idInstance;
     }
+
 }
