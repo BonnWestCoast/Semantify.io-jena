@@ -23,7 +23,7 @@ public class RDFStoreController {
         RDFStoreController storeController = new RDFStoreController();
 
         /* fill the dataset */
-        //storeController.fillDataset(storeController);
+        // storeController.fillDataset(storeController);
         //storeController.queryOntology("product", query);
         //storeController.listOntologies();
         //storeController.getSchemaByName("tbox");
