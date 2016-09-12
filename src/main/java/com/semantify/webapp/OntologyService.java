@@ -84,7 +84,7 @@ public class OntologyService {
      * @return the triples in String format
      */
     @POST
-    @Path("/query/{id}")
+    @Path("/query")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage(

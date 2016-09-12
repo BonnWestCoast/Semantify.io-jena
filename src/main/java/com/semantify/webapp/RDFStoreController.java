@@ -1,5 +1,6 @@
 package com.semantify.webapp;
 
+import org.apache.jena.graph.Graph;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.tdb.TDBFactory;
@@ -24,10 +25,11 @@ public class RDFStoreController {
         /* fill the dataset */
         //storeController.fillDataset(storeController);
         //storeController.queryOntology("product", query);
-        storeController.listOntologies();
-        storeController.getSchemaByName("tbox");
+        //storeController.listOntologies();
+        //storeController.getSchemaByName("tbox");
         //storeController.getSchemaByName("xobt");
         //storeController.cleanDataset();
+        storeController.getSchemas();
 
     }
 
@@ -145,6 +147,7 @@ public class RDFStoreController {
 
     }
 
+
     /**
      * Looks on the dataset variable and returns a list of all the models
      * @return ontologies
@@ -183,6 +186,11 @@ public class RDFStoreController {
      */
     public void storeOntology(String nameSchema, String pathSchema) {
 
+        /**
+         * ToDo:
+         * Determine if we are dealing with an Schema or Instance
+         */
+
         dataset.begin(ReadWrite.WRITE);
 
         try {
@@ -195,6 +203,45 @@ public class RDFStoreController {
             dataset.addNamedModel(nameSchema, model);
             dataset.commit();
 
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        } finally {
+            dataset.end();
+        }
+    }
+
+    public void getSchemas() {
+
+        /**
+         * Determine if we are dealing with an Schema or Instance
+         */
+
+        List<String> ontologies = new ArrayList<String>();
+        ontologies = new ArrayList<String>();
+        Model model = null;
+
+        dataset.begin(ReadWrite.READ);
+
+        try {
+
+            Iterator list = dataset.listNames();
+
+            while ( list.hasNext() ) {
+
+                String modelName = (String) list.next();
+                ontologies.add(modelName);
+                model = dataset.getNamedModel(modelName);
+
+                /* get the URL of this schema */
+                StmtIterator iter = model.listStatements();
+                while ( iter.hasNext() ) {
+                    Statement stmt = iter.nextStatement();
+                    Resource rs = stmt.getSubject();
+                    imprime( "resource:" + rs.toString() );
+                }
+            }
+
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());
         } finally {
@@ -202,5 +249,4 @@ public class RDFStoreController {
         }
 
     }
-
 }
