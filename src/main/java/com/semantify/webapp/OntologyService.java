@@ -62,6 +62,7 @@ public class OntologyService {
         ArrayList<Ontology> data = new ArrayList<Ontology>();
 
         RDFStoreController controller = new RDFStoreController();
+        controller.fillDataset(controller);
         List<String> result = controller.listOntologies();
 
         for (String nameOntology: result) {
