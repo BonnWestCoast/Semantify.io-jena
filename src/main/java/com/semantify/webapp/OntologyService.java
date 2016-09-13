@@ -103,14 +103,14 @@ public class OntologyService {
          * Customize answer if there ontology does not exist, error message
          */
 
-        String query = requestQuery.toString();
+        String query = requestQuery.getData();
         System.out.println(query);
 
         RDFStoreController controller = new RDFStoreController();
         String queryResult = controller.queryOntology(ontology, query);
 
-        Success success = new Success(queryResult);
-        String json = new Gson().toJson(success);
+        // Success success = new Success(queryResult);
+        String json = new Gson().toJson(queryResult);
 
         return Response.status(200).entity(json).build();
 
