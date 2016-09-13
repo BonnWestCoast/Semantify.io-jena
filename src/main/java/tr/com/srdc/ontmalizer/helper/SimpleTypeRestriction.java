@@ -2,7 +2,6 @@ package tr.com.srdc.ontmalizer.helper;
 
 import com.sun.xml.xsom.XSFacet;
 import com.sun.xml.xsom.XSRestrictionSimpleType;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 

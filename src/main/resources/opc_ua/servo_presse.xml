@@ -1,7 +1,6 @@
 <UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
   xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd"
-  xmlns:s1="http://siemens.com/CM_PMA/Types.xsd"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <NamespaceUris>
         <Uri>http://siemens.com/CM_PMA/</Uri>
@@ -9029,7 +9028,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -9162,7 +9161,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -9318,7 +9317,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -9451,7 +9450,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -11944,7 +11943,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -12077,7 +12076,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -12573,7 +12572,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -12706,7 +12705,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -13348,7 +13347,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -13481,7 +13480,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -13935,7 +13934,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -14068,7 +14067,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -14520,7 +14519,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -14653,7 +14652,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -15675,7 +15674,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -15808,7 +15807,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -16263,7 +16262,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -16396,7 +16395,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -16891,7 +16890,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -17024,7 +17023,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -18085,7 +18084,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -18218,7 +18217,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -20843,7 +20842,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -20976,7 +20975,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -21471,7 +21470,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -21604,7 +21603,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -22729,7 +22728,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -22862,7 +22861,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -23358,7 +23357,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -23491,7 +23490,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -24030,7 +24029,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -24163,7 +24162,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -24659,7 +24658,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -24792,7 +24791,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -25287,7 +25286,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -25420,7 +25419,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -26209,7 +26208,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -26342,7 +26341,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -26797,7 +26796,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -26930,7 +26929,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -28854,7 +28853,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -28987,7 +28986,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -32042,7 +32041,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -32175,7 +32174,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -33119,7 +33118,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -33252,7 +33251,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -33748,7 +33747,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -33881,7 +33880,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -34606,7 +34605,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -34739,7 +34738,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -35978,7 +35977,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -36111,7 +36110,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -37660,7 +37659,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -37793,7 +37792,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -40427,7 +40426,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -40560,7 +40559,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -41057,7 +41056,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -41190,7 +41189,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -42553,7 +42552,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -42686,7 +42685,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -43182,7 +43181,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -43315,7 +43314,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -43855,7 +43854,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -43988,7 +43987,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -44484,7 +44483,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>
@@ -44617,7 +44616,7 @@
                     <uax:Identifier>i=12082</uax:Identifier>
                 </uax:TypeId>
                 <uax:Body>
-                    <XVType xmlns="http://opcfoundation.org/UA/Types.xsd">
+                    <XVType xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
                         <X xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</X>
                         <Value xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Value>
                     </XVType>

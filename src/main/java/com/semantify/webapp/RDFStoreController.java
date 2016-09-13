@@ -4,7 +4,7 @@ package com.semantify.webapp;
  * Created by shinho on 8/15/16.
  */
 public class RDFStoreController {
-    private static int storeOntology(String ontology) {
+    public int storeOntology(String ontology) {
 
         int ontologyID = 0;
         /*

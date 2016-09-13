@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package tr.com.srdc.ontmalizer.helper;
 

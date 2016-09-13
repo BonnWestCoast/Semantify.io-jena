@@ -5,7 +5,12 @@ package tr.com.srdc.ontmalizer.helper;
 
 import com.sun.xml.xsom.parser.AnnotationContext;
 import com.sun.xml.xsom.parser.AnnotationParser;
-import org.xml.sax.*;
+import org.xml.sax.Attributes;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.Locator;
+import org.xml.sax.SAXException;
 
 /**
  * @author mustafa
@@ -17,7 +22,7 @@ public class XsdAnnotationParser extends AnnotationParser {
 
     @Override
     public ContentHandler getContentHandler(AnnotationContext context,
-            String parentElementName, ErrorHandler handler, EntityResolver resolver) {
+                                            String parentElementName, ErrorHandler handler, EntityResolver resolver) {
         return new ContentHandler() {
             private boolean parsingDocumentation = false;
 
@@ -39,7 +44,7 @@ public class XsdAnnotationParser extends AnnotationParser {
 
             @Override
             public void startElement(String uri, String localName, String name,
-                    Attributes atts) throws SAXException {
+                                     Attributes atts) throws SAXException {
                 if (localName.equals("documentation")) {
                     parsingDocumentation = true;
                 }

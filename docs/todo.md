@@ -1,14 +1,10 @@
-# customizing Ontmalizer
-## Issues
-### XSD to Ontology
+# TODO
 
-* `xs:sequence` - owl doesn't support sequence?
-* `xs:choice` - ontmalizer doesn't handle `minOccurs=0` well - under `xs:choice`.
-* `xs:element` when property name and type are same. property name should have prefix "has"
+## servo_presse.xml
+* delete `xmlns:s1="http://siemens.com/CM_PMA/Types.xsd"`
+* change `http://opcfoundation.org/Types.xsd` to `http://opcfoundation.org/UA/2008/02/Types.xsd`
 
 
-### rules
-
-* maxOccurs, minOccurs: default = 1
-*
-* base => class
+## OpcUA NodeSet.xml
+* remove `version` to pass validation
+* 

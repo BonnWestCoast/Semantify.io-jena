@@ -1,0 +1,1162 @@
+@prefix :      <http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dtype: <http://www.srdc.com.tr/ontmalizer#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:UAView  a               owl:Class ;
+        rdfs:subClassOf  :UAInstance ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :EventNotifierDatatype ;
+                           owl:onProperty     :attrEventNotifier
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrEventNotifier
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrContainsNoLoops
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrContainsNoLoops
+                         ] .
+
+:attrPublicationDate  a  owl:DatatypeProperty .
+
+:attrBaseType  a  owl:DatatypeProperty .
+
+:attrUserAccessLevel  a  owl:DatatypeProperty .
+
+:attrArrayDimensions  a  owl:DatatypeProperty .
+
+:attrContainsNoLoops  a  owl:DatatypeProperty .
+
+:attrDataType  a  owl:DatatypeProperty .
+
+:UriTable  a             owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :attrUri
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrUri
+                         ] .
+
+:attrReferenceType  a  owl:DatatypeProperty .
+
+:attrSymbolicName  a  owl:DatatypeProperty .
+
+:UAMethod  a             owl:Class ;
+        rdfs:subClassOf  :UAInstance ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrMethodDeclarationId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrMethodDeclarationId
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrUserExecutable
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrUserExecutable
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrExecutable
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrExecutable
+                         ] .
+
+:hasRequiredModel  a  owl:ObjectProperty .
+
+:UAInstance  a           owl:Class ;
+        rdfs:subClassOf  :UANode ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrParentNodeId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrParentNodeId
+                         ] .
+
+:UAObjectType  a         owl:Class ;
+        rdfs:subClassOf  :UAType .
+
+:hasNode  a     owl:ObjectProperty .
+
+:Reference  a            owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrIsForward
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrIsForward
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:ListOfReferences  a     owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasReference
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :Reference ;
+                           owl:onProperty     :hasReference
+                         ] .
+
+:attrName  a    owl:DatatypeProperty .
+
+:hasModel  a    owl:ObjectProperty .
+
+:DurationDatatype  a     rdfs:Datatype ;
+        rdfs:subClassOf  xsd:double .
+
+:hasDefinition  a  owl:ObjectProperty .
+
+:attrTransactionId  a  owl:DatatypeProperty .
+
+:attrAlias  a   owl:DatatypeProperty .
+
+:UANodeSetChanges  a     owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrTransactionId
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ListOfExtensions ;
+                           owl:onProperty     :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasReferencesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UriTable ;
+                           owl:onProperty     :hasServerUris
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNodesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrAcceptAllOrNothing
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNamespaceUris
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrAcceptAllOrNothing
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrVersion
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodesToDelete ;
+                           owl:onProperty     :hasNodesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasAliases
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:onProperty     :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrTransactionId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNodesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UriTable ;
+                           owl:onProperty     :hasNamespaceUris
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ReferencesToChange ;
+                           owl:onProperty     :hasReferencesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ReferencesToChange ;
+                           owl:onProperty     :hasReferencesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodesToAdd ;
+                           owl:onProperty     :hasNodesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :AliasTable ;
+                           owl:onProperty     :hasAliases
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasServerUris
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasReferencesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrVersion
+                         ] .
+
+:attrUserWriteMask  a  owl:DatatypeProperty .
+
+:hasReferencesToDelete
+        a       owl:ObjectProperty .
+
+:attrMinimumSamplingInterval
+        a       owl:DatatypeProperty .
+
+:Anon   a       owl:Class .
+
+:AliasTable  a           owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasAlias
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdAlias ;
+                           owl:onProperty     :hasAlias
+                         ] .
+
+:hasReferences  a  owl:ObjectProperty .
+
+:UAObject  a             owl:Class ;
+        rdfs:subClassOf  :UAInstance ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :EventNotifierDatatype ;
+                           owl:onProperty     :attrEventNotifier
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrEventNotifier
+                         ] .
+
+:hasAliases  a  owl:ObjectProperty .
+
+:NodeSetStatus  a        owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:unsignedInt ;
+                           owl:onProperty     :attrCode
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrCode
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:hasTranslation  a  owl:ObjectProperty .
+
+:DataTypeField  a        owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrIsOptional
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasDescription
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :SymbolicNameDatatype ;
+                           owl:onProperty     :attrSymbolicName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:int ;
+                           owl:onProperty     :attrValue
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ValueRankDatatype ;
+                           owl:onProperty     :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrIsOptional
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasDefinition
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrValue
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrSymbolicName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :DataTypeDefinition ;
+                           owl:onProperty     :hasDefinition
+                         ] .
+
+:hasModels  a   owl:ObjectProperty .
+
+:hasExtension  a  owl:ObjectProperty .
+
+:attrUri  a     owl:DatatypeProperty .
+
+:hasText  a     owl:ObjectProperty .
+
+:hasUAVariableType  a  owl:ObjectProperty .
+
+:LocalizedText  a        owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocaleDatatype ;
+                           owl:onProperty     :attrLocale
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrLocale
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:attrEventNotifier  a  owl:DatatypeProperty .
+
+:attrMethodDeclarationId
+        a       owl:DatatypeProperty .
+
+:ModelTableEntry  a      owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:onProperty     :attrPublicationDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrPublicationDate
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrVersion
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrVersion
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrModelUri
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrModelUri
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasRequiredModel
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ModelTableEntry ;
+                           owl:onProperty     :hasRequiredModel
+                         ] .
+
+:LocaleDatatype  a       rdfs:Datatype ;
+        rdfs:subClassOf  xsd:string .
+
+:UADataType  a           owl:Class ;
+        rdfs:subClassOf  :UAType ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasDefinition
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :DataTypeDefinition ;
+                           owl:onProperty     :hasDefinition
+                         ] .
+
+:attrExecutable  a  owl:DatatypeProperty .
+
+:hasStatus  a   owl:ObjectProperty .
+
+:Anon_1  a               owl:Class ;
+        rdfs:subClassOf  :Anon .
+
+:hasValue  a    owl:ObjectProperty .
+
+:hasNodesToDelete  a  owl:ObjectProperty .
+
+:UAVariableType  a       owl:Class ;
+        rdfs:subClassOf  :UAType ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ArrayDimensionsDatatype ;
+                           owl:onProperty     :attrArrayDimensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ValueRankDatatype ;
+                           owl:onProperty     :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasValue
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrArrayDimensions
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :Anon_3 ;
+                           owl:onProperty     :hasValue
+                         ] .
+
+:attrModelUri  a  owl:DatatypeProperty .
+
+:attrSymmetric  a  owl:DatatypeProperty .
+
+:TranslationType  a      owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasField
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :StructureTranslationType ;
+                           owl:onProperty     :hasField
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasText
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasText
+                         ] .
+
+:hasUADataType  a  owl:ObjectProperty .
+
+:hasDescription  a  owl:ObjectProperty .
+
+:attrIsForward  a  owl:DatatypeProperty .
+
+:WriteMaskDatatype  a    rdfs:Datatype ;
+        rdfs:subClassOf  xsd:unsignedInt .
+
+:ModelTable  a           owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasModel
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ModelTableEntry ;
+                           owl:onProperty     :hasModel
+                         ] .
+
+:attrWriteMask  a  owl:DatatypeProperty .
+
+:attrHistorizing  a  owl:DatatypeProperty .
+
+:hasUAObject  a  owl:ObjectProperty .
+
+:hasField  a    owl:ObjectProperty .
+
+:attrAcceptAllOrNothing
+        a       owl:DatatypeProperty .
+
+:Anon_2  a               owl:Class ;
+        rdfs:subClassOf  :Anon .
+
+:NodeIdDatatype  a       rdfs:Datatype ;
+        rdfs:subClassOf  xsd:string .
+
+:NodeIdAlias  a          owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrAlias
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrAlias
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:hasUAView  a   owl:ObjectProperty .
+
+:NodesToAdd  a           owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAReferenceType ;
+                           owl:onProperty     :hasUAReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UADataType ;
+                           owl:onProperty     :hasUADataType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAVariableType ;
+                           owl:onProperty     :hasUAVariableType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAObjectType ;
+                           owl:onProperty     :hasUAObjectType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAView ;
+                           owl:onProperty     :hasUAView
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAMethod ;
+                           owl:onProperty     :hasUAMethod
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAVariable ;
+                           owl:onProperty     :hasUAVariable
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAObject ;
+                           owl:onProperty     :hasUAObject
+                         ] .
+
+:attrParentNodeId  a  owl:DatatypeProperty .
+
+:EventNotifierDatatype
+        a                rdfs:Datatype ;
+        rdfs:subClassOf  xsd:unsignedByte .
+
+:ValueRankDatatype  a    rdfs:Datatype ;
+        rdfs:subClassOf  xsd:int .
+
+:attrLocale  a  owl:DatatypeProperty .
+
+:UAType  a               owl:Class ;
+        rdfs:subClassOf  :UANode ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrIsAbstract
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrIsAbstract
+                         ] .
+
+:hasNamespaceUris  a  owl:ObjectProperty .
+
+:NodesToDelete  a        owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasNode
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeToDelete ;
+                           owl:onProperty     :hasNode
+                         ] .
+
+:attrDocumentation  a  owl:DatatypeProperty .
+
+:hasUAMethod  a  owl:ObjectProperty .
+
+:hasNodesToAdd  a  owl:ObjectProperty .
+
+:StructureTranslationType
+        a                owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasText
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasText
+                         ] .
+
+:attrValueRank  a  owl:DatatypeProperty .
+
+:QualifiedNameDatatype
+        a                rdfs:Datatype ;
+        rdfs:subClassOf  xsd:string .
+
+:ReferencesToChange  a   owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasReference
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ReferenceChange ;
+                           owl:onProperty     :hasReference
+                         ] .
+
+dtype:hasValue  a  rdf:Property .
+
+:hasAlias  a    owl:ObjectProperty .
+
+:attrNodeId  a  owl:DatatypeProperty .
+
+:attrBrowseName  a  owl:DatatypeProperty .
+
+:UAVariable  a           owl:Class ;
+        rdfs:subClassOf  :UAInstance ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasValue
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ArrayDimensionsDatatype ;
+                           owl:onProperty     :attrArrayDimensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ValueRankDatatype ;
+                           owl:onProperty     :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrArrayDimensions
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrValueRank
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrHistorizing
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasTranslation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :Anon_1 ;
+                           owl:onProperty     :hasValue
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrDataType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrHistorizing
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :TranslationType ;
+                           owl:onProperty     :hasTranslation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :AccessLevelDatatype ;
+                           owl:onProperty     :attrUserAccessLevel
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :DurationDatatype ;
+                           owl:onProperty     :attrMinimumSamplingInterval
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrUserAccessLevel
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrMinimumSamplingInterval
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :AccessLevelDatatype ;
+                           owl:onProperty     :attrAccessLevel
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrAccessLevel
+                         ] .
+
+:UAReferenceType  a      owl:Class ;
+        rdfs:subClassOf  :UAType ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrSymmetric
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrSymmetric
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasInverseName
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasInverseName
+                         ] .
+
+:DataTypeDefinition  a   owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrIsUnion
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrSymbolicName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasField
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrBaseType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :DataTypeField ;
+                           owl:onProperty     :hasField
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :QualifiedNameDatatype ;
+                           owl:onProperty     :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrIsUnion
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :SymbolicNameDatatype ;
+                           owl:onProperty     :attrSymbolicName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrName
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :QualifiedNameDatatype ;
+                           owl:onProperty     :attrBaseType
+                         ] .
+
+:attrLastModified  a  owl:DatatypeProperty .
+
+:ListOfExtensions  a     owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasExtension
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :Anon_2 ;
+                           owl:onProperty     :hasExtension
+                         ] .
+
+:hasUAReferenceType  a  owl:ObjectProperty .
+
+:UANodeSet  a            owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAView ;
+                           owl:onProperty     :hasUAView
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAReferenceType ;
+                           owl:onProperty     :hasUAReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UriTable ;
+                           owl:onProperty     :hasServerUris
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAObjectType ;
+                           owl:onProperty     :hasUAObjectType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasServerUris
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:onProperty     :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ListOfExtensions ;
+                           owl:onProperty     :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAMethod ;
+                           owl:onProperty     :hasUAMethod
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UriTable ;
+                           owl:onProperty     :hasNamespaceUris
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :AliasTable ;
+                           owl:onProperty     :hasAliases
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAObject ;
+                           owl:onProperty     :hasUAObject
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ModelTable ;
+                           owl:onProperty     :hasModels
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasAliases
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAVariable ;
+                           owl:onProperty     :hasUAVariable
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UAVariableType ;
+                           owl:onProperty     :hasUAVariableType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNamespaceUris
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :UADataType ;
+                           owl:onProperty     :hasUADataType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasModels
+                         ] .
+
+:hasReferencesToAdd  a  owl:ObjectProperty .
+
+:Anon_3  a               owl:Class ;
+        rdfs:subClassOf  :Anon .
+
+:SymbolicNameDatatype
+        a                rdfs:Datatype ;
+        rdfs:subClassOf  xsd:anySimpleType .
+
+:hasReference  a  owl:ObjectProperty .
+
+:NodeSetStatusList  a    owl:Class ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasStatus
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeSetStatus ;
+                           owl:onProperty     :hasStatus
+                         ] .
+
+:attrVersion  a  owl:DatatypeProperty .
+
+:UANodeSetChangesStatus
+        a                owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrVersion
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNodesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasNodesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrTransactionId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasReferencesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeSetStatusList ;
+                           owl:onProperty     :hasReferencesToDelete
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasReferencesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeSetStatusList ;
+                           owl:onProperty     :hasNodesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeSetStatusList ;
+                           owl:onProperty     :hasReferencesToAdd
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrTransactionId
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:onProperty     :attrLastModified
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrVersion
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeSetStatusList ;
+                           owl:onProperty     :hasNodesToDelete
+                         ] .
+
+:hasUAVariable  a  owl:ObjectProperty .
+
+:hasExtensions  a  owl:ObjectProperty .
+
+:hasServerUris  a  owl:ObjectProperty .
+
+:attrSource  a  owl:DatatypeProperty .
+
+:attrCategory  a  owl:DatatypeProperty .
+
+:attrIsUnion  a  owl:DatatypeProperty .
+
+:attrAccessLevel  a  owl:DatatypeProperty .
+
+:ReferenceChange  a      owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrIsForward
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrIsForward
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrReferenceType
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrSource
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrSource
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:NodeToDelete  a         owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :attrDeleteReverseReferences
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrDeleteReverseReferences
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     dtype:hasValue
+                         ] .
+
+:attrValue  a   owl:DatatypeProperty .
+
+:attrUserExecutable  a  owl:DatatypeProperty .
+
+:hasDisplayName  a  owl:ObjectProperty .
+
+:ArrayDimensionsDatatype
+        a                rdfs:Datatype ;
+        rdfs:subClassOf  xsd:anySimpleType .
+
+:attrIsAbstract  a  owl:DatatypeProperty .
+
+:CardinalityTypeDatatype
+        a                rdfs:Datatype ;
+        rdfs:subClassOf  xsd:anySimpleType .
+
+:attrIsOptional  a  owl:DatatypeProperty .
+
+:AccessLevelDatatype  a  rdfs:Datatype ;
+        rdfs:subClassOf  xsd:unsignedByte .
+
+:hasUAObjectType  a  owl:ObjectProperty .
+
+:UANode  a               owl:Class ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :WriteMaskDatatype ;
+                           owl:onProperty     :attrUserWriteMask
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrNodeId
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:int ;
+                           owl:onProperty   :attrBrowseName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasDisplayName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasReferences
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :LocalizedText ;
+                           owl:onProperty     :hasDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrWriteMask
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrCategory
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :QualifiedNameDatatype ;
+                           owl:onProperty     :attrBrowseName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :attrCategory
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ListOfReferences ;
+                           owl:onProperty     :hasReferences
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrUserWriteMask
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasDisplayName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      :hasDescription
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :WriteMaskDatatype ;
+                           owl:onProperty     :attrWriteMask
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :NodeIdDatatype ;
+                           owl:onProperty     :attrNodeId
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :SymbolicNameDatatype ;
+                           owl:onProperty     :attrSymbolicName
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ListOfExtensions ;
+                           owl:onProperty     :hasExtensions
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :attrDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      :attrSymbolicName
+                         ] .
+
+:attrDeleteReverseReferences
+        a       owl:DatatypeProperty .
+
+:attrCode  a    owl:DatatypeProperty .
+
+:hasInverseName  a  owl:ObjectProperty .
