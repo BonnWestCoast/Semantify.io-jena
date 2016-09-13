@@ -92,7 +92,7 @@ public class OntologyService {
     //@Consumes(MediaType.APPLICATION_JSON)
     //@Produces(MediaType.APPLICATION_JSON)
     @Consumes("application/json")
-    @Produces({"application/xml", "application/json"})
+    @Produces({"application/json"})
     public Response SPARQLQuery(
         @PathParam("id") String ontology,
         RequestQuery requestQuery
@@ -109,8 +109,8 @@ public class OntologyService {
         RDFStoreController controller = new RDFStoreController();
         String queryResult = controller.queryOntology(ontology, query);
 
-        // Success success = new Success(queryResult);
-        String json = new Gson().toJson(queryResult);
+        Success success = new Success(queryResult);
+        String json = new Gson().toJson(success);
 
         return Response.status(200).entity(json).build();
 
