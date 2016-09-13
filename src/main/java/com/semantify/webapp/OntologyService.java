@@ -102,6 +102,8 @@ public class OntologyService {
          */
 
         String query = requestQuery.getData();
+        System.out.println(query);
+
         RDFStoreController controller = new RDFStoreController();
         String queryResult = controller.queryOntology(ontology, query);
 
