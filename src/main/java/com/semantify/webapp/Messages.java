@@ -27,12 +27,20 @@ class RequestQuery {
 
     String data;
 
+    public RequestQuery(){
+    }
+
     public String getData(){
         return data;
     }
 
     public void setData(String data){
        this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return new StringBuffer(" Data : ").append(this.data).toString();
     }
 
 }

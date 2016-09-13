@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.MediaType;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.google.gson.Gson;
+import com.sun.org.apache.regexp.internal.RE;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 
 @Path("/ontologies")
@@ -86,9 +89,11 @@ public class OntologyService {
      */
     @POST
     @Path("/query/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getMessage(
+    //@Consumes(MediaType.APPLICATION_JSON)
+    //@Produces(MediaType.APPLICATION_JSON)
+    @Consumes("application/json")
+    @Produces({"application/xml", "application/json"})
+    public Response SPARQLQuery(
         @PathParam("id") String ontology,
         RequestQuery requestQuery
     ) {
@@ -98,7 +103,7 @@ public class OntologyService {
          * Customize answer if there ontology does not exist, error message
          */
 
-        String query = requestQuery.getData();
+        String query = requestQuery.toString();
         System.out.println(query);
 
         RDFStoreController controller = new RDFStoreController();
