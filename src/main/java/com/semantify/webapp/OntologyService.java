@@ -89,10 +89,8 @@ public class OntologyService {
      */
     @POST
     @Path("/query/{id}")
-    //@Consumes(MediaType.APPLICATION_JSON)
-    //@Produces(MediaType.APPLICATION_JSON)
-    @Consumes("application/json")
-    @Produces({"application/xml", "application/json"})
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response SPARQLQuery(
         @PathParam("id") String ontology,
         RequestQuery requestQuery
@@ -103,9 +101,7 @@ public class OntologyService {
          * Customize answer if there ontology does not exist, error message
          */
 
-        String query = requestQuery.toString();
-        System.out.println(query);
-
+        String query = requestQuery.getData();
         RDFStoreController controller = new RDFStoreController();
         String queryResult = controller.queryOntology(ontology, query);
 
