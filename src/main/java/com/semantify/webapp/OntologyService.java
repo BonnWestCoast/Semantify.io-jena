@@ -81,22 +81,25 @@ public class OntologyService {
     /**
      * A SPARQL query is executed in a model
      * @param ontology with this variable we access to the specified model
-     * @param query is the String
+     * @param requestQuery is the String
      * @return the triples in String format
      */
     @POST
     @Path("/query/{id}")
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage(
         @PathParam("id") String ontology,
-        @FormDataParam("query") String query
+        RequestQuery requestQuery
     ) {
 
         /**
          * ToDo
          * Customize answer if there ontology does not exist, error message
          */
+
+        String query = requestQuery.getData();
+        System.out.println(query);
 
         RDFStoreController controller = new RDFStoreController();
         String queryResult = controller.queryOntology(ontology, query);
