@@ -1,25 +1,45 @@
 package com.semantify.webapp;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * POJOs: Auxiliary classes to built a response with JSON format
  */
 
-class Success {
+/**
+ * Helps to build the success messages
+ */
 
-    int ontologyID;
+class Messages {
+
     boolean success = true;
+    Date time = null;
+
+    protected void setTime(){
+        this.time = new Date();
+    }
+
+
+}
+
+class Success extends Messages {
+
+    String data = null;
 
     public Success () {}
 
-    public Success(int ontologyID) {
-        this.ontologyID = ontologyID;
+    public Success(String data) {
+        setTime();
+        this.data = data;
     }
 
 }
 
-class Error {
+/**
+ * Helps to build the error messages
+ */
+class Error extends Messages {
 
     String message = "";
     boolean success = false;
@@ -27,38 +47,65 @@ class Error {
     public Error () {}
 
     public Error(String message) {
+        setTime();
         this.message = message;
     }
 
 }
 
-class Element {
+/**
+ * Get ontology method in format:
+ * {
+ *   data: 'pure ontology text',
+ *   time: Date.now(),
+ *   success: true
+ * }
+ */
+class Ontology extends Messages {
 
-    int id;
-    String name;
-    String content;
+    String id = null;
+    String name = null;
+    String data = null;
 
-    public Element() {}
+    public Ontology() {}
 
-    public Element(int id, String name) {
+    public Ontology(String data) {
+        setTime();
+        this.data = data;
+    }
+
+    public Ontology(String id, String name) {
+        setTime();
         this.id = id;
         this.name = name;
     }
 
-    public Element(int id, String name, String content) {
+    public Ontology(String id, String name, String data) {
+        setTime();
         this.id = id;
         this.name = name;
-        this.content = content;
+        this.data = data;
     }
 
 }
 
-class elementList {
+/**
+ * List of ontologies in format:
+ * {
+ *   data: [{'name': ',,,,', id: '...'},{'name': '...', id: ',,'}],
+ *   time: Date.now(),
+ *   success: true
+ * }
+ */
+class OntologyList extends Messages {
 
-    public ArrayList<Element> list;
-    public elementList () {}
-    public elementList(ArrayList<Element> list) {
-        this.list = list;
-    }
+     ArrayList<Ontology> data;
+
+     public OntologyList () {}
+
+     public OntologyList(ArrayList<Ontology> data) {
+         setTime();
+         this.data = data;
+     }
 
 }

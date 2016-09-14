@@ -16,7 +16,7 @@ import de.uni_stuttgart.vis.vowl.owl2vowl.Owl2Vowl;
 @Path("/visualize")
 public class VisualizeService {
 
-    /**
+    /**e
      * Convert from OWL (TTL, RDF) to VOWL format, which is used on client side for visualization
      * @return json response
      */
