@@ -45,6 +45,11 @@ public class OntmalizerController {
         ontology.importOntology(isOnt);
     }
 
+    public void importOPCUATypesOntology() {
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream typesOnt = classLoader.getResourceAsStream("output/Types_Ont.ttl");
+        importOntology(typesOnt);
+    }
 
     public void createOPCUATypesOntology() {
         XSD2OWLMapper mapping = new XSD2OWLMapper(xmlSchema);
