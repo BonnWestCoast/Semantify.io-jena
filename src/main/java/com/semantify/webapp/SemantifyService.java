@@ -2,6 +2,7 @@ package com.semantify.webapp;
 
 import com.google.gson.Gson;
 import opcua.ontmalizer.OntmalizerController;
+import org.apache.commons.io.IOUtils;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.junit.Test;
@@ -13,14 +14,12 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.XMLConstants;
+import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 
 @Path("/ontologies")
@@ -28,9 +27,48 @@ public class SemantifyService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SemantifyService.class);
 
+    /**
+     * Conversion InputStream --> String
+     * @param inputStream
+     * @return
+     */
+    private String isToString (InputStream inputStream) {
+
+        StringWriter writer = new StringWriter();
+
+        try {
+            IOUtils.copy(inputStream, writer, "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String string = writer.toString();
+        return string;
+
+    }
+
+
+    /**
+     * Conversion String --> InputStream
+     * @param string
+     * @return
+     */
+    private InputStream stringToInputStream (String string) {
+
+        InputStream stream = null;
+        try {
+            stream = new ByteArrayInputStream(string.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return stream;
+
+    }
+
+
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces("text/plain")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage(
             @FormDataParam("schema") InputStream schemaInputStream,
             @FormDataParam("instance") InputStream instanceInputStream,
@@ -39,10 +77,23 @@ public class SemantifyService {
             @FormDataParam("ontName") String ontName
     ) {
 
-        boolean areValidXML = validateXML(schemaInputStream, instanceInputStream);
+        /* note: dirty code to reuse the InputStream several times */
+        String schemaIS = isToString(schemaInputStream);
+        String instanceIS = isToString(instanceInputStream);
+
+        InputStream schema = stringToInputStream(schemaIS);
+        InputStream instance = stringToInputStream(instanceIS);
+
+        boolean areValidXML = validateXML(schema, instance);
+
+        System.out.println("Valid XML: " + areValidXML);
 
         if (areValidXML) {
-            OntHandler oh = new OntHandler(ontName, schemaInputStream, instanceInputStream);
+
+            schema = stringToInputStream(schemaIS);
+            instance = stringToInputStream(instanceIS);
+
+            OntHandler oh = new OntHandler(ontName, schema, instance);
             oh.convertOntology();
             oh.storeOntology();
 
@@ -86,6 +137,7 @@ public class SemantifyService {
 
     @Test
     public void testCreateModel_OpcUa(){
+
         try {
             ClassLoader classLoader = getClass().getClassLoader();
             InputStream schemaInputStream = classLoader.getResourceAsStream("opc_ua/UANodeSet.xsd");
@@ -101,10 +153,28 @@ public class SemantifyService {
         }
     }
 
-
 }
 
+
 class OntHandler {
+
+    /**
+     * Conversion String --> InputStream
+     * @param string
+     * @return
+     */
+    private InputStream stringToInputStream (String string) {
+
+        InputStream stream = null;
+        try {
+            stream = new ByteArrayInputStream(string.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return stream;
+
+    }
+
     public String ontName = null;
     private InputStream schemaInputStream = null;
     private InputStream instanceInputStream = null;
@@ -129,16 +199,22 @@ class OntHandler {
     }
 
     public void storeOntology() {
-        try {
-            FileOutputStream fs;
-            String filename = "src/main/resources/data/" + this.ontName + ".ttl";
-            File f = new File(filename);
-            fs = new FileOutputStream(f);
-            this.ontController.getOntology().writeOntology(fs, "N3");
-            this.ontController.getModel().writeModel(fs, "N3");
-            fs.close();
-        } catch (Exception e) {
 
+        try {
+
+            //
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
+            this.ontController.getOntology().writeOntology(os, "N3");
+            this.ontController.getModel().writeModel(os, "N3");
+
+            String result = os.toString("UTF-8");
+            InputStream is = stringToInputStream(result);
+            RDFStoreController controller = new RDFStoreController();
+
+            controller.storeOntology(this.ontName, is);
+
+        } catch (Exception e) {
+            System.out.println("Error :" +  e.toString());
         }
     }
 }

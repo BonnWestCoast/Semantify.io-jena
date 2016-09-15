@@ -6,10 +6,7 @@ import java.util.List;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.MediaType;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.google.gson.Gson;
-import com.sun.org.apache.regexp.internal.RE;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 
 @Path("/ontologies")
 public class OntologyService {
@@ -65,7 +62,6 @@ public class OntologyService {
         ArrayList<Ontology> data = new ArrayList<Ontology>();
 
         RDFStoreController controller = new RDFStoreController();
-        controller.fillDataset(controller);
         List<String> result = controller.listOntologies();
 
         for (String nameOntology: result) {

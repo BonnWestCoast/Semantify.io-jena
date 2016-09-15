@@ -44,7 +44,7 @@ public class RDFStoreController {
     /**
      * Auxiliar method to delete all the models in the dataset
      */
-    private void cleanDataset() {
+    public void cleanDataset() {
 
         Iterator list = dataset.listNames();
         String nameModel = "";
@@ -181,6 +181,7 @@ public class RDFStoreController {
 
     }
 
+
     /**
      * Stores the ontology using the name and path of the Schema
      * @param nameSchema
@@ -212,6 +213,34 @@ public class RDFStoreController {
             dataset.end();
         }
     }
+
+
+    /**
+     * Stores the ontology using the name and path of the Schema
+     * @param nameSchema
+     * @param inputStream
+     */
+    public void storeOntology(String nameSchema, InputStream inputStream) {
+
+        dataset.begin(ReadWrite.WRITE);
+
+        try {
+
+            /* Create the model */
+            Model model = ModelFactory.createDefaultModel();
+            model.read(inputStream, null, "N3");
+
+            dataset.addNamedModel(nameSchema, model);
+            dataset.commit();
+
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        } finally {
+            dataset.end();
+        }
+    }
+
 
     public void getSchemas() {
 
