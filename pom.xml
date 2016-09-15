@@ -18,17 +18,9 @@
     <properties>
         <jersey2.version>2.22.2</jersey2.version>
         <jaxrs.version>2.0.1</jaxrs.version>
-        <junit.version>3.8.1</junit.version>
     </properties>
 
     <dependencies>
-        <!-- JUNIT -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>com.github.VisualDataWeb</groupId>
             <artifactId>OWL2VOWL</artifactId>
@@ -136,8 +128,7 @@
             <artifactId>apache-jena-libs</artifactId>
             <type>pom</type>
             <version>3.1.0</version>
-
-            <!--exclusions>
+            <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
@@ -146,7 +137,7 @@
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
                 </exclusion>
-            </exclusions-->
+            </exclusions>
 
         </dependency>
 
@@ -176,12 +167,13 @@
             <artifactId>xsom</artifactId>
             <version>20140925</version>
         </dependency>
+
+        <!-- JUNIT -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.11</version>
         </dependency>
-
     </dependencies>
 
     <build>

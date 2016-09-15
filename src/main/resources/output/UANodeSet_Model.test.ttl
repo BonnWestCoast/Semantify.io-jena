@@ -1,0 +1,2309 @@
+@base          <http://www.srdc.com.tr/ontmalizer/instance#> .
+@prefix opctypes: <http://opcfoundation.org/UA/2008/02/Types.xsd#> .
+@prefix :      <http://www.srdc.com.tr/ontmalizer/instance#> .
+@prefix UANodeSet.xsd: <http://opcfoundation.org/UA/2011/03/UANodeSet.xsd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dtype: <http://www.srdc.com.tr/ontmalizer#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:INS7350370_UAObjectType_4
+        a                             UANodeSet.xsd:UAObjectType ;
+        UANodeSet.xsd:attrBrowseName  "DataTypeEncodingType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=76"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_160 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_69 .
+
+:INS7350370_NodeIdAlias_18
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "ExpandedNodeId" ;
+        UANodeSet.xsd:attrTextContent  "i=18" .
+
+:INS7350370_LocalizedText_68
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NonHierarchicalReferences" .
+
+:INS7350370_DataTypeDefinition_1
+        a                       UANodeSet.xsd:DataTypeDefinition ;
+        UANodeSet.xsd:attrName  "NamingRuleType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:hasField  :INS7350370_DataTypeField_3 , :INS7350370_DataTypeField_2 , :INS7350370_DataTypeField_1 .
+
+:INS7350370_UADataType_31
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "NamingRuleType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=120"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDefinition   :INS7350370_DataTypeDefinition_1 ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_162 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_161 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_70 .
+
+:INS7350370_ListOfReferences_51
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_49 .
+
+:INS7350370_Reference_10
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_38
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a sequence of printable Unicode characters." .
+
+:INS7350370_LocalizedText_147
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeDescriptionType" .
+
+:INS7350370_ListOfReferences_21
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_20 .
+
+:INS7350370_LocalizedText_117
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical reference from a node to its component when the order of references matters." .
+
+:INS7350370_Reference_52
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_ListOfReferences_3
+        a       UANodeSet.xsd:ListOfReferences .
+
+:INS7350370_ListOfReferences_63
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_63 , :INS7350370_Reference_62 , :INS7350370_Reference_61 .
+
+:INS7350370_Reference_22
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UAVariableType_5
+        a                             UANodeSet.xsd:UAVariableType ;
+        UANodeSet.xsd:attrBrowseName  "DataTypeDictionaryType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType    "ByteString"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=72"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrValueRank   "-2"^^UANodeSet.xsd:ValueRankDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_154 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_153 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_65 .
+
+:INS7350370_UAReferenceType_6
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasEventSource"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=36"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_81 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_80 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_82 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_38 .
+
+:INS7350370_LocalizedText_159
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeSystemType" .
+
+:INS7350370_UADataType_13
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Int64"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=8"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_30 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_29 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_15 .
+
+:INS7350370_ListOfReferences_33
+        a       UANodeSet.xsd:ListOfReferences .
+
+:INS7350370_UADataType_7
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "SByte"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=2"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_18 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_17 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_9 .
+
+:INS7350370_NodeIdAlias_31
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasSubtype" ;
+        UANodeSet.xsd:attrTextContent  "i=45" .
+
+:INS7350370_LocalizedText_81
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical references that are used to organize event sources." .
+
+:INS7350370_LocalizedText_129
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to an event that may be raised when a transition occurs." .
+
+:INS7350370_Reference_64
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=68" .
+
+:INS7350370_LocalizedText_51
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "StatusCode" .
+
+:INS7350370_UAReferenceType_11
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "GeneratesEvent"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=41"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_96 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_95 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_97 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_43 .
+
+:INS7350370_LocalizedText_160
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeEncodingType" .
+
+:INS7350370_Reference_34
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=33" .
+
+:INS7350370_LocalizedText_21
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Int16" .
+
+:INS7350370_LocalizedText_130
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "MayBeEffectedBy" .
+
+:INS7350370_UADataType_25
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "QualifiedName"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=20"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_54 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_53 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_27 .
+
+:INS7350370_ListOfReferences_45
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_43 .
+
+:INS7350370_NodeIdAlias_7
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "UInt32" ;
+        UANodeSet.xsd:attrTextContent  "i=7" .
+
+:INS7350370_LocalizedText_2
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The default binary encoding for a data type." .
+
+:INS7350370_LocalizedText_93
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from a instance node its type defintion node." .
+
+:INS7350370_LocalizedText_100
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "AlwaysGeneratesEvent" .
+
+:INS7350370_ListOfReferences_15
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_14 .
+
+:INS7350370_Reference_76
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=58" .
+
+:INS7350370_NodeIdAlias_13
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "String" ;
+        UANodeSet.xsd:attrTextContent  "i=12" .
+
+:INS7350370_LocalizedText_63
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Image" .
+
+:INS7350370_Reference_7
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UAReferenceType_23
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasSubStateMachine"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=117"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_132 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_131 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_133 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_55 .
+
+:INS7350370_Reference_46
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=44" .
+
+:INS7350370_LocalizedText_33
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Float" .
+
+:INS7350370_LocalizedText_142
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The abstract base type for all variable nodes." .
+
+:INS7350370_ListOfReferences_57
+        a       UANodeSet.xsd:ListOfReferences .
+
+:INS7350370_Reference_16
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=26" .
+
+:INS7350370_LocalizedText_112
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ComponentOf" .
+
+:INS7350370_ListOfReferences_27
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_26 .
+
+:INS7350370_NodeIdAlias_25
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "UInteger" ;
+        UANodeSet.xsd:attrTextContent  "i=28" .
+
+:INS7350370_LocalizedText_75
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The abstract base type for all non-looping hierarchical references." .
+
+:INS7350370_Reference_58
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=104" .
+
+:INS7350370_LocalizedText_45
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "XmlElement" .
+
+:INS7350370_UAReferenceType_1
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "References"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=31"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrSymmetric   true ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_66 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_65 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_67 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_33 .
+
+:INS7350370_ListOfReferences_9
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_8 .
+
+:INS7350370_ListOfReferences_69
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_77 .
+
+:INS7350370_LocalizedText_154
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for variable that represents the collection of data type decriptions." .
+
+:INS7350370_Reference_28
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UADataType_2
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Number"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=26"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_8 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_7 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_4 .
+
+:INS7350370_LocalizedText_15
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Boolean" .
+
+:INS7350370_LocalizedText_124
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "FromTransition" .
+
+:INS7350370_UADataType_19
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Guid"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=14"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_42 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_41 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_21 .
+
+:INS7350370_ListOfReferences_39
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_37 .
+
+:INS7350370_LocalizedText_87
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from data type nodes to to data type encoding nodes." .
+
+:INS7350370_ListOfReferences_70
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_79 , :INS7350370_Reference_78 .
+
+:INS7350370_LocalizedText_57
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Structure" .
+
+:INS7350370_UAReferenceType_17
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasNotifier"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=48"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_114 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_113 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_115 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_49 .
+
+:INS7350370_UADataType_20
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "ByteString"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=15"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_44 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_43 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_22 .
+
+:INS7350370_ListOfReferences_40
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_38 .
+
+:INS7350370_NodeIdAlias_2
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "SByte" ;
+        UANodeSet.xsd:attrTextContent  "i=2" .
+
+:INS7350370_LocalizedText_27
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "UInt32" .
+
+:INS7350370_UANodeSet_1
+        a                               UANodeSet.xsd:UANodeSet ;
+        UANodeSet.xsd:attrLastModified  "2013-03-06T05:36:44.0862658Z"^^xsd:dateTime ;
+        UANodeSet.xsd:hasAliases        :INS7350370_AliasTable_1 ;
+        UANodeSet.xsd:hasUADataType     :INS7350370_UADataType_29 , :INS7350370_UADataType_18 , :INS7350370_UADataType_25 , :INS7350370_UADataType_14 , :INS7350370_UADataType_20 , :INS7350370_UADataType_2 , :INS7350370_UADataType_7 , :INS7350370_UADataType_28 , :INS7350370_UADataType_30 , :INS7350370_UADataType_24 , :INS7350370_UADataType_4 , :INS7350370_UADataType_19 , :INS7350370_UADataType_17 , :INS7350370_UADataType_11 , :INS7350370_UADataType_13 , :INS7350370_UADataType_1 , :INS7350370_UADataType_22 , :INS7350370_UADataType_15 , :INS7350370_UADataType_8 , :INS7350370_UADataType_6 , :INS7350370_UADataType_27 , :INS7350370_UADataType_16 , :INS7350370_UADataType_23 , :INS7350370_UADataType_12 , :INS7350370_UADataType_3 , :INS7350370_UADataType_26 , :INS7350370_UADataType_31 , :INS7350370_UADataType_21 , :INS7350370_UADataType_10 , :INS7350370_UADataType_9 , :INS7350370_UADataType_5 ;
+        UANodeSet.xsd:hasUAObject       :INS7350370_UAObject_2 , :INS7350370_UAObject_1 ;
+        UANodeSet.xsd:hasUAObjectType   :INS7350370_UAObjectType_3 , :INS7350370_UAObjectType_1 , :INS7350370_UAObjectType_4 , :INS7350370_UAObjectType_2 ;
+        UANodeSet.xsd:hasUAReferenceType
+                :INS7350370_UAReferenceType_24 , :INS7350370_UAReferenceType_18 , :INS7350370_UAReferenceType_5 , :INS7350370_UAReferenceType_13 , :INS7350370_UAReferenceType_8 , :INS7350370_UAReferenceType_16 , :INS7350370_UAReferenceType_19 , :INS7350370_UAReferenceType_22 , :INS7350370_UAReferenceType_6 , :INS7350370_UAReferenceType_2 , :INS7350370_UAReferenceType_20 , :INS7350370_UAReferenceType_11 , :INS7350370_UAReferenceType_9 , :INS7350370_UAReferenceType_17 , :INS7350370_UAReferenceType_21 , :INS7350370_UAReferenceType_1 , :INS7350370_UAReferenceType_14 , :INS7350370_UAReferenceType_10 , :INS7350370_UAReferenceType_23 , :INS7350370_UAReferenceType_7 , :INS7350370_UAReferenceType_3 , :INS7350370_UAReferenceType_12 , :INS7350370_UAReferenceType_4 , :INS7350370_UAReferenceType_15 ;
+        UANodeSet.xsd:hasUAVariable     :INS7350370_UAVariable_2 , :INS7350370_UAVariable_3 , :INS7350370_UAVariable_1 , :INS7350370_UAVariable_4 ;
+        UANodeSet.xsd:hasUAVariableType
+                :INS7350370_UAVariableType_2 , :INS7350370_UAVariableType_3 , :INS7350370_UAVariableType_1 , :INS7350370_UAVariableType_5 , :INS7350370_UAVariableType_4 .
+
+:INS7350370_UAVariable_4
+        a                               UANodeSet.xsd:UAVariable ;
+        UANodeSet.xsd:attrBrowseName    "NamespaceUri"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType      "String"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=107"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrParentNodeId  "i=72"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_158 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_157 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_67 .
+
+:INS7350370_LocalizedText_136
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HistoricalConfigurationOf" .
+
+:INS7350370_ListOfReferences_10
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_9 .
+
+:INS7350370_Reference_71
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasModellingRule"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=80" .
+
+:INS7350370_LocalizedText_8
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that can have any numeric DataType." .
+
+:INS7350370_Reference_2
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=58" .
+
+:INS7350370_LocalizedText_99
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from a node to an event type that is always raised by node." .
+
+:INS7350370_LocalizedText_106
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasSupertype" .
+
+:INS7350370_Reference_41
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_NodeIdAlias_19
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "QualifiedName" ;
+        UANodeSet.xsd:attrTextContent  "i=20" .
+
+:INS7350370_LocalizedText_69
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The abstract base type for all non-hierarchical references." .
+
+:INS7350370_ListOfReferences_52
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_50 .
+
+:INS7350370_Reference_11
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=28" .
+
+:INS7350370_LocalizedText_39
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DateTime" .
+
+:INS7350370_LocalizedText_148
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for variable that represents the description of a data type encoding." .
+
+:INS7350370_ListOfReferences_22
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_21 .
+
+:INS7350370_NodeIdAlias_20
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "LocalizedText" ;
+        UANodeSet.xsd:attrTextContent  "i=21" .
+
+:INS7350370_LocalizedText_70
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NonHierarchicalReferences" .
+
+:INS7350370_LocalizedText_118
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "OrderedComponentOf" .
+
+:INS7350370_Reference_53
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_LocalizedText_40
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a Gregorian calender date and time." .
+
+:INS7350370_ListOfReferences_4
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_3 .
+
+:INS7350370_ListOfReferences_64
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_66 , :INS7350370_Reference_65 , :INS7350370_Reference_64 .
+
+:INS7350370_Reference_23
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_10
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that can have any integer DataType." .
+
+:INS7350370_UAReferenceType_7
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasModellingRule"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=37"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_84 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_83 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_85 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_39 .
+
+:INS7350370_UADataType_14
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "UInt64"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=9"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_32 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_31 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_16 .
+
+:INS7350370_ListOfReferences_34
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_32 .
+
+:INS7350370_UADataType_8
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Byte"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=3"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_20 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_19 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_10 .
+
+:INS7350370_NodeIdAlias_32
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasTypeDefinition" ;
+        UANodeSet.xsd:attrTextContent  "i=40" .
+
+:INS7350370_LocalizedText_82
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "EventSourceOf" .
+
+:INS7350370_Reference_65
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasModellingRule"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=80" .
+
+:INS7350370_LocalizedText_52
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a code representing the outcome of an operation by a Server." .
+
+:INS7350370_UAReferenceType_12
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "AlwaysGeneratesEvent"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=3065"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_99 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_98 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_100 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_44 .
+
+:INS7350370_LocalizedText_161
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NamingRuleType" .
+
+:INS7350370_Reference_35
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=33" .
+
+:INS7350370_LocalizedText_22
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between −32,768 and 32,767." .
+
+:INS7350370_LocalizedText_131
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasSubStateMachine" .
+
+:INS7350370_UADataType_26
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "LocalizedText"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=21"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_56 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_55 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_28 .
+
+:INS7350370_ListOfReferences_46
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_44 .
+
+:INS7350370_NodeIdAlias_8
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Int64" ;
+        UANodeSet.xsd:attrTextContent  "i=8" .
+
+:INS7350370_LocalizedText_3
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Default XML" .
+
+:INS7350370_LocalizedText_94
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "TypeDefinitionOf" .
+
+:INS7350370_LocalizedText_101
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Aggregates" .
+
+:INS7350370_ListOfReferences_16
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_15 .
+
+:INS7350370_Reference_77
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=58" .
+
+:INS7350370_NodeIdAlias_14
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "ByteString" ;
+        UANodeSet.xsd:attrTextContent  "i=15" .
+
+:INS7350370_Reference_8
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_64
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an image encoded as a string of bytes." .
+
+:INS7350370_UAReferenceType_24
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasHistoricalConfiguration"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=56"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_135 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_134 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_136 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_56 .
+
+:INS7350370_Reference_47
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=36" .
+
+:INS7350370_LocalizedText_34
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an IEEE 754-1985 single precision floating point number." .
+
+:INS7350370_AliasTable_1
+        a                       UANodeSet.xsd:AliasTable ;
+        UANodeSet.xsd:hasAlias  :INS7350370_NodeIdAlias_23 , :INS7350370_NodeIdAlias_24 , :INS7350370_NodeIdAlias_4 , :INS7350370_NodeIdAlias_22 , :INS7350370_NodeIdAlias_10 , :INS7350370_NodeIdAlias_27 , :INS7350370_NodeIdAlias_32 , :INS7350370_NodeIdAlias_26 , :INS7350370_NodeIdAlias_14 , :INS7350370_NodeIdAlias_1 , :INS7350370_NodeIdAlias_12 , :INS7350370_NodeIdAlias_19 , :INS7350370_NodeIdAlias_34 , :INS7350370_NodeIdAlias_9 , :INS7350370_NodeIdAlias_16 , :INS7350370_NodeIdAlias_3 , :INS7350370_NodeIdAlias_17 , :INS7350370_NodeIdAlias_7 , :INS7350370_NodeIdAlias_8 , :INS7350370_NodeIdAlias_2 , :INS7350370_NodeIdAlias_18 , :INS7350370_NodeIdAlias_6 , :INS7350370_NodeIdAlias_29 , :INS7350370_NodeIdAlias_28 , :INS7350370_NodeIdAlias_30 , :INS7350370_NodeIdAlias_31 , :INS7350370_NodeIdAlias_13 , :INS7350370_NodeIdAlias_21 , :INS7350370_NodeIdAlias_11 , :INS7350370_NodeIdAlias_35 , :INS7350370_NodeIdAlias_20 , :INS7350370_NodeIdAlias_25 , :INS7350370_NodeIdAlias_5 , :INS7350370_NodeIdAlias_33 , :INS7350370_NodeIdAlias_15 .
+
+:INS7350370_LocalizedText_143
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "BaseDataVariableType" .
+
+:INS7350370_ListOfReferences_58
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_55 .
+
+:INS7350370_Reference_17
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=26" .
+
+:INS7350370_LocalizedText_113
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasNotifier" .
+
+:INS7350370_ListOfReferences_28
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_27 .
+
+:INS7350370_NodeIdAlias_26
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasComponent" ;
+        UANodeSet.xsd:attrTextContent  "i=47" .
+
+:INS7350370_LocalizedText_76
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ChildOf" .
+
+:INS7350370_Reference_59
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=105" .
+
+:INS7350370_UAVariableType_1
+        a                             UANodeSet.xsd:UAVariableType ;
+        UANodeSet.xsd:attrBrowseName  "BaseVariableType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=62"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrValueRank   "-2"^^UANodeSet.xsd:ValueRankDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_142 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_141 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_59 .
+
+:INS7350370_LocalizedText_46
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an XML element." .
+
+:INS7350370_UAReferenceType_2
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "NonHierarchicalReferences"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=32"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_69 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_68 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_70 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_34 .
+
+:INS7350370_LocalizedText_155
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeVersion" .
+
+:INS7350370_Reference_29
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UADataType_3
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Integer"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=27"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_10 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_9 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_5 .
+
+:INS7350370_LocalizedText_16
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is either TRUE or FALSE." .
+
+:INS7350370_LocalizedText_125
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasCause" .
+
+:INS7350370_Reference_60
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=63" .
+
+:INS7350370_LocalizedText_88
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "EncodingOf" .
+
+:INS7350370_Reference_30
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_58
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is any type of structure that can be described with a data encoding." .
+
+:INS7350370_UAReferenceType_18
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasOrderedComponent"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=49"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_117 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_116 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_118 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_50 .
+
+:INS7350370_UADataType_21
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "XmlElement"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=16"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_46 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_45 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_23 .
+
+:INS7350370_ListOfReferences_41
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_39 .
+
+:INS7350370_NodeIdAlias_3
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Byte" ;
+        UANodeSet.xsd:attrTextContent  "i=3" .
+
+:INS7350370_LocalizedText_28
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between 0 and 4,294,967,295." .
+
+:INS7350370_LocalizedText_137
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "BaseObjectType" .
+
+:INS7350370_ListOfReferences_11
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_10 .
+
+:INS7350370_Reference_72
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=72" .
+
+:INS7350370_LocalizedText_9
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Integer" .
+
+:INS7350370_Reference_3
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_107
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasProperty" .
+
+:INS7350370_Reference_42
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_ListOfReferences_53
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_51 .
+
+:INS7350370_Reference_12
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_149
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeVersion" .
+
+:INS7350370_ListOfReferences_23
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_22 .
+
+:INS7350370_NodeIdAlias_21
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "StatusCode" ;
+        UANodeSet.xsd:attrTextContent  "i=19" .
+
+:INS7350370_LocalizedText_71
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HierarchicalReferences" .
+
+:INS7350370_LocalizedText_119
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "FromState" .
+
+:INS7350370_Reference_54
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=44" .
+
+:INS7350370_LocalizedText_41
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Guid" .
+
+:INS7350370_ListOfReferences_5
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_4 .
+
+:INS7350370_ListOfReferences_65
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_69 , :INS7350370_Reference_68 , :INS7350370_Reference_67 .
+
+:INS7350370_LocalizedText_150
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The version number for the data type description." .
+
+:INS7350370_Reference_24
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_11
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "UInteger" .
+
+:INS7350370_UAReferenceType_8
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasEncoding"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=38"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_87 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_86 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_88 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_40 .
+
+:INS7350370_LocalizedText_120
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to the state before a transition." .
+
+:INS7350370_UADataType_15
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Float"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=10"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_34 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_33 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_17 .
+
+:INS7350370_ListOfReferences_35
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_33 .
+
+:INS7350370_UADataType_9
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Int16"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=4"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_22 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_21 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_11 .
+
+:INS7350370_NodeIdAlias_33
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasModellingRule" ;
+        UANodeSet.xsd:attrTextContent  "i=37" .
+
+:INS7350370_LocalizedText_83
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasModellingRule" .
+
+:INS7350370_Reference_66
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=69" .
+
+:INS7350370_LocalizedText_53
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "QualifiedName" .
+
+:INS7350370_UAReferenceType_13
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "Aggregates"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=44"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_102 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_101 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_103 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_45 .
+
+:INS7350370_LocalizedText_162
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that specifies the significance of the BrowseName for an instance declaration." .
+
+:INS7350370_Reference_36
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=33" .
+
+:INS7350370_LocalizedText_23
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "UInt16" .
+
+:INS7350370_LocalizedText_132
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to a substate for a state." .
+
+:INS7350370_UADataType_27
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Structure"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=22"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_58 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_57 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_29 .
+
+:INS7350370_ListOfReferences_47
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_45 .
+
+:INS7350370_NodeIdAlias_9
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "UInt64" ;
+        UANodeSet.xsd:attrTextContent  "i=9" .
+
+:INS7350370_LocalizedText_4
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The default XML encoding for a data type." .
+
+:INS7350370_LocalizedText_95
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "GeneratesEvent" .
+
+:INS7350370_LocalizedText_102
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical references that are used to aggregate nodes into complex types." .
+
+:INS7350370_ListOfReferences_17
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_16 .
+
+:INS7350370_Reference_78
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=12169" .
+
+:INS7350370_UAObjectType_1
+        a                             UANodeSet.xsd:UAObjectType ;
+        UANodeSet.xsd:attrBrowseName  "BaseObjectType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=58"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_138 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_137 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_57 .
+
+:INS7350370_NodeIdAlias_15
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Guid" ;
+        UANodeSet.xsd:attrTextContent  "i=14" .
+
+:INS7350370_LocalizedText_65
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "References" .
+
+:INS7350370_Reference_9
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=28" .
+
+:INS7350370_Reference_48
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=47" .
+
+:INS7350370_LocalizedText_35
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Double" .
+
+:INS7350370_LocalizedText_144
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for variable that represents a process value." .
+
+:INS7350370_ListOfReferences_59
+        a       UANodeSet.xsd:ListOfReferences .
+
+:INS7350370_Reference_18
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_114
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical references that are used to indicate how events propagate from node to node." .
+
+:INS7350370_ListOfReferences_29
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_28 .
+
+:INS7350370_NodeIdAlias_27
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasProperty" ;
+        UANodeSet.xsd:attrTextContent  "i=46" .
+
+:INS7350370_LocalizedText_77
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Organizes" .
+
+:INS7350370_ListOfReferences_60
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_56 .
+
+:INS7350370_UAVariableType_2
+        a                             UANodeSet.xsd:UAVariableType ;
+        UANodeSet.xsd:attrBrowseName  "BaseDataVariableType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=63"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrValueRank   "-2"^^UANodeSet.xsd:ValueRankDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_144 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_143 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_60 .
+
+:INS7350370_LocalizedText_47
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NodeId" .
+
+:INS7350370_UAReferenceType_3
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HierarchicalReferences"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=33"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_72 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_71 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_73 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_35 .
+
+:INS7350370_LocalizedText_156
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The version number for the data type dictionary." .
+
+:INS7350370_UADataType_10
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "UInt16"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=5"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_24 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_23 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_12 .
+
+:INS7350370_ListOfReferences_30
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_29 .
+
+:INS7350370_UAObject_1
+        a                               UANodeSet.xsd:UAObject ;
+        UANodeSet.xsd:attrBrowseName    "Default Binary"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=3062"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrSymbolicName  "DefaultBinary"^^UANodeSet.xsd:SymbolicNameDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_2 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_1 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_1 .
+
+:INS7350370_UADataType_4
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "UInteger"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=28"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_12 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_11 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_6 .
+
+:INS7350370_LocalizedText_17
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "SByte" .
+
+:INS7350370_LocalizedText_126
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to a method that can cause a transition to occur." .
+
+:INS7350370_Reference_61
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=68" .
+
+:INS7350370_LocalizedText_89
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasDescription" .
+
+:INS7350370_Reference_31
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=15" .
+
+:INS7350370_LocalizedText_59
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataValue" .
+
+:INS7350370_UAReferenceType_19
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "FromState"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=51"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_120 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_119 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_121 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_51 .
+
+:INS7350370_UADataType_22
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "NodeId"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=17"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_48 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_47 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_24 .
+
+:INS7350370_ListOfReferences_42
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_40 .
+
+:INS7350370_NodeIdAlias_4
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Int16" ;
+        UANodeSet.xsd:attrTextContent  "i=4" .
+
+:INS7350370_LocalizedText_29
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Int64" .
+
+:INS7350370_LocalizedText_90
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from data type encoding nodes to data type description nodes." .
+
+:INS7350370_LocalizedText_138
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The base type for all object nodes." .
+
+:INS7350370_ListOfReferences_12
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_11 .
+
+:INS7350370_Reference_73
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=68" .
+
+:INS7350370_NodeIdAlias_10
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Float" ;
+        UANodeSet.xsd:attrTextContent  "i=10" .
+
+:INS7350370_LocalizedText_60
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a structure containing a value, a status code and timestamps." .
+
+:INS7350370_Reference_4
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=26" .
+
+:INS7350370_UAReferenceType_20
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "ToState"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=52"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_123 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_122 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_124 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_52 .
+
+:INS7350370_LocalizedText_108
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical reference from a node to its property." .
+
+:INS7350370_Reference_43
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=34" .
+
+:INS7350370_LocalizedText_30
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between −9,223,372,036,854,775,808 and 9,223,372,036,854,775,807." .
+
+:INS7350370_ListOfReferences_54
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_52 .
+
+:INS7350370_Reference_13
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=28" .
+
+:INS7350370_ListOfReferences_24
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_23 .
+
+:INS7350370_NodeIdAlias_22
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Structure" ;
+        UANodeSet.xsd:attrTextContent  "i=22" .
+
+:INS7350370_LocalizedText_72
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The abstract base type for all hierarchical references." .
+
+:INS7350370_Reference_55
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=58" .
+
+:INS7350370_LocalizedText_42
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a 128-bit globally unique identifier." .
+
+:INS7350370_ListOfReferences_6
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_5 .
+
+:INS7350370_ListOfReferences_66
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_72 , :INS7350370_Reference_71 , :INS7350370_Reference_70 .
+
+:INS7350370_LocalizedText_151
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DictionaryFragment" .
+
+:INS7350370_Reference_25
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_12
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that can have any unsigned integer DataType." .
+
+:INS7350370_UAReferenceType_9
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasDescription"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=39"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_90 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_89 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_91 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_41 .
+
+:INS7350370_LocalizedText_121
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ToTransition" .
+
+:INS7350370_UADataType_16
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Double"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=11"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_36 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_35 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_18 .
+
+:INS7350370_ListOfReferences_36
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_34 .
+
+:INS7350370_DataTypeField_1
+        a                             UANodeSet.xsd:DataTypeField ;
+        UANodeSet.xsd:attrName        "Mandatory" ;
+        UANodeSet.xsd:attrValue       "1"^^xsd:int ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_163 .
+
+:INS7350370_NodeIdAlias_34
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasEncoding" ;
+        UANodeSet.xsd:attrTextContent  "i=38" .
+
+:INS7350370_LocalizedText_84
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from instance declarations to modelling rule nodes." .
+
+:INS7350370_Reference_67
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=106" .
+
+:INS7350370_LocalizedText_54
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a name qualified by a namespace." .
+
+:INS7350370_UAReferenceType_14
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasSubtype"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=45"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_105 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_104 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_106 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_46 .
+
+:INS7350370_LocalizedText_163
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The BrowseName must appear in all instances of the type." .
+
+:INS7350370_Reference_37
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_LocalizedText_24
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between 0 and 65535." .
+
+:INS7350370_UAVariable_1
+        a                               UANodeSet.xsd:UAVariable ;
+        UANodeSet.xsd:attrBrowseName    "DataTypeVersion"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType      "String"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=104"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrParentNodeId  "i=69"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_150 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_149 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_63 .
+
+:INS7350370_LocalizedText_133
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "SubStateMachineOf" .
+
+:INS7350370_UADataType_28
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "DataValue"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=23"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_60 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_59 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_30 .
+
+:INS7350370_ListOfReferences_48
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_46 .
+
+:INS7350370_LocalizedText_5
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "BaseDataType" .
+
+:INS7350370_LocalizedText_96
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for references from a node to an event type that is raised by node." .
+
+:INS7350370_LocalizedText_103
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "AggregatedBy" .
+
+:INS7350370_ListOfReferences_18
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_17 .
+
+:INS7350370_Reference_79
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=29" .
+
+:INS7350370_UAObjectType_2
+        a                             UANodeSet.xsd:UAObjectType ;
+        UANodeSet.xsd:attrBrowseName  "FolderType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=61"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_140 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_139 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_58 .
+
+:INS7350370_NodeIdAlias_16
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "XmlElement" ;
+        UANodeSet.xsd:attrTextContent  "i=16" .
+
+:INS7350370_LocalizedText_66
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The abstract base type for all references." .
+
+:INS7350370_Reference_49
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_LocalizedText_36
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an IEEE 754-1985 double precision floating point number." .
+
+:INS7350370_LocalizedText_145
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "PropertyType" .
+
+:INS7350370_Reference_19
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_115
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NotifierOf" .
+
+:INS7350370_Reference_50
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_NodeIdAlias_28
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Organizes" ;
+        UANodeSet.xsd:attrTextContent  "i=35" .
+
+:INS7350370_LocalizedText_78
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for hierarchical references that are used to organize nodes." .
+
+:INS7350370_ListOfReferences_1
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_1 .
+
+:INS7350370_ListOfReferences_61
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_57 .
+
+:INS7350370_Reference_20
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UAVariableType_3
+        a                             UANodeSet.xsd:UAVariableType ;
+        UANodeSet.xsd:attrBrowseName  "PropertyType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=68"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrValueRank   "-2"^^UANodeSet.xsd:ValueRankDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_146 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_145 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_61 .
+
+:INS7350370_LocalizedText_48
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an identifier for a node within a Server address space." .
+
+:INS7350370_UAReferenceType_4
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasChild"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=34"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_75 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_74 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_76 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_36 .
+
+:INS7350370_LocalizedText_157
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "NamespaceUri" .
+
+:INS7350370_UADataType_11
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Int32"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=6"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_26 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_25 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_13 .
+
+:INS7350370_ListOfReferences_31
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_30 .
+
+:INS7350370_UAObject_2
+        a                               UANodeSet.xsd:UAObject ;
+        UANodeSet.xsd:attrBrowseName    "Default XML"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=3063"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrSymbolicName  "DefaultXml"^^UANodeSet.xsd:SymbolicNameDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_4 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_3 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_2 .
+
+:INS7350370_UADataType_5
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Enumeration"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=29"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_14 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_13 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_7 .
+
+:INS7350370_LocalizedText_18
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between -128 and 127." .
+
+:INS7350370_LocalizedText_127
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "MayBeCausedBy" .
+
+:INS7350370_Reference_62
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasModellingRule"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=80" .
+
+:INS7350370_Reference_32
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=31" .
+
+:INS7350370_UADataType_23
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "ExpandedNodeId"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=18"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_50 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_49 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_25 .
+
+:INS7350370_ListOfReferences_43
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_41 .
+
+:INS7350370_NodeIdAlias_5
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "UInt16" ;
+        UANodeSet.xsd:attrTextContent  "i=5" .
+
+:INS7350370_LocalizedText_91
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DescriptionOf" .
+
+:INS7350370_LocalizedText_139
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "FolderType" .
+
+:INS7350370_ListOfReferences_13
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_12 .
+
+:INS7350370_Reference_74
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasModellingRule"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=80" .
+
+:INS7350370_NodeIdAlias_11
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Double" ;
+        UANodeSet.xsd:attrTextContent  "i=11" .
+
+:INS7350370_Reference_5
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_61
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DiagnosticInfo" .
+
+:INS7350370_UAReferenceType_21
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasCause"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=53"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_126 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_125 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_127 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_53 .
+
+:INS7350370_LocalizedText_109
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "PropertyOf" .
+
+:INS7350370_Reference_44
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=34" .
+
+:INS7350370_LocalizedText_31
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "UInt64" .
+
+:INS7350370_LocalizedText_140
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for objects that organize other nodes." .
+
+:INS7350370_ListOfReferences_55
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_53 .
+
+:INS7350370_Reference_14
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_110
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasComponent" .
+
+:INS7350370_ListOfReferences_25
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_24 .
+
+:INS7350370_NodeIdAlias_23
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Number" ;
+        UANodeSet.xsd:attrTextContent  "i=26" .
+
+:INS7350370_LocalizedText_73
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HierarchicalReferences" .
+
+:INS7350370_Reference_56
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=62" .
+
+:INS7350370_LocalizedText_43
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ByteString" .
+
+:INS7350370_ListOfReferences_7
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_6 .
+
+:INS7350370_ListOfReferences_67
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_75 , :INS7350370_Reference_74 , :INS7350370_Reference_73 .
+
+:INS7350370_LocalizedText_152
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "A fragment of a data type dictionary that defines the data type." .
+
+:INS7350370_Reference_26
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_LocalizedText_13
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Enumeration" .
+
+:INS7350370_LocalizedText_122
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ToState" .
+
+:INS7350370_UADataType_17
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "String"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=12"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_38 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_37 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_19 .
+
+:INS7350370_ListOfReferences_37
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_35 .
+
+:INS7350370_DataTypeField_2
+        a                             UANodeSet.xsd:DataTypeField ;
+        UANodeSet.xsd:attrName        "Optional" ;
+        UANodeSet.xsd:attrValue       "2"^^xsd:int ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_164 .
+
+:INS7350370_NodeIdAlias_35
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasDescription" ;
+        UANodeSet.xsd:attrTextContent  "i=39" .
+
+:INS7350370_LocalizedText_85
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ModellingRuleOf" .
+
+:INS7350370_Reference_68
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=107" .
+
+:INS7350370_LocalizedText_55
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "LocalizedText" .
+
+:INS7350370_UAReferenceType_15
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasProperty"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=46"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_108 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_107 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_109 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_47 .
+
+:INS7350370_LocalizedText_164
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The BrowseName may appear in an instance of the type." .
+
+:INS7350370_Reference_38
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_LocalizedText_25
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Int32" .
+
+:INS7350370_UAVariable_2
+        a                               UANodeSet.xsd:UAVariable ;
+        UANodeSet.xsd:attrBrowseName    "DictionaryFragment"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType      "ByteString"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=105"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrParentNodeId  "i=69"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_152 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_151 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_64 .
+
+:INS7350370_LocalizedText_134
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasHistoricalConfiguration" .
+
+:INS7350370_UADataType_29
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "DiagnosticInfo"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=25"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_62 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_61 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_31 .
+
+:INS7350370_ListOfReferences_49
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_47 .
+
+:INS7350370_LocalizedText_6
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that can have any valid DataType." .
+
+:INS7350370_LocalizedText_97
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "GeneratesEvent" .
+
+:INS7350370_LocalizedText_104
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasSubtype" .
+
+:INS7350370_ListOfReferences_19
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_18 .
+
+:INS7350370_UAObjectType_3
+        a                             UANodeSet.xsd:UAObjectType ;
+        UANodeSet.xsd:attrBrowseName  "DataTypeSystemType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=75"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_159 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_68 .
+
+:INS7350370_NodeIdAlias_17
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "NodeId" ;
+        UANodeSet.xsd:attrTextContent  "i=17" .
+
+:INS7350370_LocalizedText_67
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "References" .
+
+:INS7350370_UADataType_30
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Image"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=30"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_64 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_63 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_32 .
+
+:INS7350370_ListOfReferences_50
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_48 .
+
+:INS7350370_LocalizedText_37
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "String" .
+
+:INS7350370_LocalizedText_146
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for variable that represents a property of another node." .
+
+:INS7350370_ListOfReferences_20
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_19 .
+
+:INS7350370_LocalizedText_116
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasOrderedComponent" .
+
+:INS7350370_Reference_51
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_NodeIdAlias_29
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasEventSource" ;
+        UANodeSet.xsd:attrTextContent  "i=36" .
+
+:INS7350370_LocalizedText_79
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "OrganizedBy" .
+
+:INS7350370_ListOfReferences_2
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_2 .
+
+:INS7350370_ListOfReferences_62
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_60 , :INS7350370_Reference_59 , :INS7350370_Reference_58 .
+
+:INS7350370_Reference_21
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UAVariableType_4
+        a                             UANodeSet.xsd:UAVariableType ;
+        UANodeSet.xsd:attrBrowseName  "DataTypeDescriptionType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType    "String"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=69"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrValueRank   "-2"^^UANodeSet.xsd:ValueRankDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_148 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_147 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_62 .
+
+:INS7350370_LocalizedText_49
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "ExpandedNodeId" .
+
+:INS7350370_UAReferenceType_5
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "Organizes"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=35"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_78 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_77 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_79 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_37 .
+
+:INS7350370_LocalizedText_158
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "A URI that uniquely identifies the dictionary." .
+
+:INS7350370_UADataType_12
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "UInt32"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=7"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_28 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_27 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_14 .
+
+:INS7350370_ListOfReferences_32
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_31 .
+
+:INS7350370_NodeIdAlias_30
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "HasNotifier" ;
+        UANodeSet.xsd:attrTextContent  "i=48" .
+
+:INS7350370_UADataType_6
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "Boolean"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=1"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_16 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_15 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_8 .
+
+:INS7350370_LocalizedText_19
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Byte" .
+
+:INS7350370_LocalizedText_80
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasEventSource" .
+
+:INS7350370_LocalizedText_128
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasEffect" .
+
+:INS7350370_Reference_63
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=69" .
+
+:INS7350370_LocalizedText_50
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an absolute identifier for a node." .
+
+:INS7350370_UAReferenceType_10
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasTypeDefinition"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=40"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_93 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_92 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_94 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_42 .
+
+:INS7350370_Reference_33
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=31" .
+
+:INS7350370_LocalizedText_20
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between 0 and 255." .
+
+:INS7350370_UADataType_24
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "StatusCode"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=19"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_52 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_51 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_26 .
+
+:INS7350370_ListOfReferences_44
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_42 .
+
+:INS7350370_NodeIdAlias_6
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Int32" ;
+        UANodeSet.xsd:attrTextContent  "i=6" .
+
+:INS7350370_LocalizedText_1
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Default Binary" .
+
+:INS7350370_LocalizedText_92
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasTypeDefinition" .
+
+:INS7350370_ListOfReferences_14
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_13 .
+
+:INS7350370_Reference_75
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasProperty"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=72" .
+
+:INS7350370_NodeIdAlias_12
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "DateTime" ;
+        UANodeSet.xsd:attrTextContent  "i=13" .
+
+:INS7350370_LocalizedText_62
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a structure containing diagnostics associated with a StatusCode." .
+
+:INS7350370_Reference_6
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UAReferenceType_22
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasEffect"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=54"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_129 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_128 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_130 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_54 .
+
+:INS7350370_Reference_45
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=44" .
+
+:INS7350370_LocalizedText_32
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between 0 and 18,446,744,073,709,551,615." .
+
+:INS7350370_LocalizedText_141
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "BaseVariableType" .
+
+:INS7350370_ListOfReferences_56
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_54 .
+
+:INS7350370_Reference_15
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=28" .
+
+:INS7350370_LocalizedText_111
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical reference from a node to its component." .
+
+:INS7350370_ListOfReferences_26
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_25 .
+
+:INS7350370_NodeIdAlias_24
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Integer" ;
+        UANodeSet.xsd:attrTextContent  "i=27" .
+
+:INS7350370_LocalizedText_74
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasChild" .
+
+:INS7350370_Reference_57
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=62" .
+
+:INS7350370_LocalizedText_44
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is a sequence of bytes." .
+
+:INS7350370_ListOfReferences_8
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_7 .
+
+:INS7350370_ListOfReferences_68
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_76 .
+
+:INS7350370_LocalizedText_153
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "DataTypeDictionaryType" .
+
+:INS7350370_Reference_27
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=24" .
+
+:INS7350370_UADataType_1
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "BaseDataType"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrIsAbstract  true ;
+        UANodeSet.xsd:attrNodeId      "i=24"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_6 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_5 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_3 .
+
+:INS7350370_LocalizedText_14
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an enumerated DataType." .
+
+:INS7350370_LocalizedText_123
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to the state after a transition." .
+
+:INS7350370_UADataType_18
+        a                             UANodeSet.xsd:UADataType ;
+        UANodeSet.xsd:attrBrowseName  "DateTime"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=13"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_40 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_39 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_20 .
+
+:INS7350370_ListOfReferences_38
+        a                           UANodeSet.xsd:ListOfReferences ;
+        UANodeSet.xsd:hasReference  :INS7350370_Reference_36 .
+
+:INS7350370_DataTypeField_3
+        a                             UANodeSet.xsd:DataTypeField ;
+        UANodeSet.xsd:attrName        "Constraint" ;
+        UANodeSet.xsd:attrValue       "3"^^xsd:int ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_165 .
+
+:INS7350370_LocalizedText_86
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "HasEncoding" .
+
+:INS7350370_Reference_69
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=63" .
+
+:INS7350370_LocalizedText_56
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is human readable Unicode text with a locale identifier." .
+
+:INS7350370_UAReferenceType_16
+        a                             UANodeSet.xsd:UAReferenceType ;
+        UANodeSet.xsd:attrBrowseName  "HasComponent"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrNodeId      "i=47"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription  :INS7350370_LocalizedText_111 ;
+        UANodeSet.xsd:hasDisplayName  :INS7350370_LocalizedText_110 ;
+        UANodeSet.xsd:hasInverseName  :INS7350370_LocalizedText_112 ;
+        UANodeSet.xsd:hasReferences   :INS7350370_ListOfReferences_48 .
+
+:INS7350370_LocalizedText_165
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The modelling rule defines a constraint and the BrowseName is not used in an instance of the type." .
+
+:INS7350370_Reference_39
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .
+
+:INS7350370_NodeIdAlias_1
+        a                              UANodeSet.xsd:NodeIdAlias ;
+        UANodeSet.xsd:attrAlias        "Boolean" ;
+        UANodeSet.xsd:attrTextContent  "i=1" .
+
+:INS7350370_LocalizedText_26
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Describes a value that is an integer between −2,147,483,648  and 2,147,483,647." .
+
+:INS7350370_UAVariable_3
+        a                               UANodeSet.xsd:UAVariable ;
+        UANodeSet.xsd:attrBrowseName    "DataTypeVersion"^^UANodeSet.xsd:QualifiedNameDatatype ;
+        UANodeSet.xsd:attrDataType      "String"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrNodeId        "i=106"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrParentNodeId  "i=72"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:hasDescription    :INS7350370_LocalizedText_156 ;
+        UANodeSet.xsd:hasDisplayName    :INS7350370_LocalizedText_155 ;
+        UANodeSet.xsd:hasReferences     :INS7350370_ListOfReferences_66 .
+
+:INS7350370_LocalizedText_135
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for a reference to the historical configuration for a data variable." .
+
+:INS7350370_Reference_70
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=68" .
+
+:INS7350370_LocalizedText_7
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "Number" .
+
+:INS7350370_Reference_1
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrReferenceType
+                "HasTypeDefinition"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=58" .
+
+:INS7350370_LocalizedText_98
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "AlwaysGeneratesEvent" .
+
+:INS7350370_LocalizedText_105
+        a                              UANodeSet.xsd:LocalizedText ;
+        UANodeSet.xsd:attrTextContent  "The type for non-looping hierarchical references that are used to define sub types." .
+
+:INS7350370_Reference_40
+        a                              UANodeSet.xsd:Reference ;
+        UANodeSet.xsd:attrIsForward    false ;
+        UANodeSet.xsd:attrReferenceType
+                "HasSubtype"^^UANodeSet.xsd:NodeIdDatatype ;
+        UANodeSet.xsd:attrTextContent  "i=32" .

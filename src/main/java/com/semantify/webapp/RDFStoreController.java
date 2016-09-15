@@ -66,6 +66,8 @@ public class RDFStoreController {
         dictionary.put("tbox", "data/tbox.owl");
         dictionary.put("abox", "data/abox.owl");
         dictionary.put("product", "data/Product.owl");
+        dictionary.put("opcua_ont", "data/UANodeSet_Ont_Merged.ttl");
+        dictionary.put("opcua test sample", "data/Test_OPCUA.ttl");
 
         Set allKeys = dictionary.keySet();
         Iterator iterKeys = allKeys.iterator();

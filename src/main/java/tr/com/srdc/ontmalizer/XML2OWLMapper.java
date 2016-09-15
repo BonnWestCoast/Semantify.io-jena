@@ -1,29 +1,48 @@
 package tr.com.srdc.ontmalizer;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Random;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.ontology.AllValuesFromRestriction;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
-import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.Literal;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFWriter;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import tr.com.srdc.ontmalizer.data.TypedResource;
 import tr.com.srdc.ontmalizer.helper.Constants;
 import tr.com.srdc.ontmalizer.helper.NamingUtil;
 import tr.com.srdc.ontmalizer.helper.XSDUtil;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.*;
 
 /**
  * XML2OWLMapper Class converts XML instances to RDF Models with respect to an
@@ -59,7 +78,7 @@ public class XML2OWLMapper {
     private String baseURI = Constants.ONTMALIZER_INSTANCE_BASE_URI;
     private String baseNS = Constants.ONTMALIZER_INSTANCE_BASE_NS;
 
-//	private ArrayList<OntClass> abstractClasses 	= null;
+    //	private ArrayList<OntClass> abstractClasses 	= null;
     private ArrayList<OntClass> mixedClasses = null;
 
     private String NS = null;

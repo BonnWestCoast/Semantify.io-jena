@@ -1,12 +1,44 @@
 package tr.com.srdc.ontmalizer;
 
-import com.sun.xml.xsom.*;
+import com.sun.xml.xsom.XSAttGroupDecl;
+import com.sun.xml.xsom.XSAttributeDecl;
+import com.sun.xml.xsom.XSAttributeUse;
+import com.sun.xml.xsom.XSComplexType;
+import com.sun.xml.xsom.XSContentType;
+import com.sun.xml.xsom.XSDeclaration;
+import com.sun.xml.xsom.XSElementDecl;
+import com.sun.xml.xsom.XSModelGroup;
+import com.sun.xml.xsom.XSModelGroupDecl;
+import com.sun.xml.xsom.XSParticle;
+import com.sun.xml.xsom.XSRestrictionSimpleType;
+import com.sun.xml.xsom.XSSchema;
+import com.sun.xml.xsom.XSSchemaSet;
+import com.sun.xml.xsom.XSSimpleType;
+import com.sun.xml.xsom.XSTerm;
+import com.sun.xml.xsom.XSType;
 import com.sun.xml.xsom.parser.XSOMParser;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import javax.xml.parsers.SAXParserFactory;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
-import org.apache.jena.ontology.*;
+import org.apache.jena.ontology.EnumeratedClass;
+import org.apache.jena.ontology.Individual;
+import org.apache.jena.ontology.OntClass;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFList;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.OWL2;
@@ -16,15 +48,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import tr.com.srdc.ontmalizer.helper.*;
-
-import javax.xml.parsers.SAXParserFactory;
-import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
+import tr.com.srdc.ontmalizer.helper.AnnotationFactory;
+import tr.com.srdc.ontmalizer.helper.Constants;
+import tr.com.srdc.ontmalizer.helper.NamingUtil;
+import tr.com.srdc.ontmalizer.helper.SimpleTypeRestriction;
+import tr.com.srdc.ontmalizer.helper.URLResolver;
+import tr.com.srdc.ontmalizer.helper.XSDUtil;
 
 /**
  * @author Atakan Kaya, Mustafa Yuksel
@@ -147,10 +176,20 @@ public class XSD2OWLMapper {
 
         ontology.setNsPrefix("", mainURI + "#");
 
-        hasValue = ontology.createProperty(Constants.ONTMALIZER_VALUE_PROP_NAME);
+        hasValue = ontology.createOntProperty(Constants.ONTMALIZER_VALUE_PROP_NAME);
 
         abstractClasses = new ArrayList<>();
         mixedClasses = new ArrayList<>();
+    }
+
+    public void setNsPrefix(String prefix) {
+
+        ontology.setNsPrefix(prefix, mainURI + "#");
+        ontology.removeNsPrefix("");
+    }
+
+    public void importOntology(InputStream isOnt) {
+        ontology.read(isOnt, null, "N3");
     }
 
     /**
@@ -198,14 +237,14 @@ public class XSD2OWLMapper {
                 // If element type is an XSD datatype
                 // An example case:
                 // <xs:element name="test" type="xs:string" />
+
                 OntClass dataType = ontology.createOntResource(OntClass.class,
                         RDFS.Datatype,
                         parentURI + Constants.DATATYPE_SUFFIX);
 
                 // Set super class to the element type
                 Resource xsdResource = XSDUtil.getXSDResource(simple.getName());
-                dataType.addProperty(OWL2.onDatatype, xsdResource);
-//                dataType.addSuperClass(xsdResource);
+                dataType.addSuperClass(xsdResource);
 
                 // Set Equivalent Datatype
 //                OntClass eqDataType = ontology.createOntResource(OntClass.class,
@@ -244,9 +283,7 @@ public class XSD2OWLMapper {
                     }
 
                     if (!insertedBefore) {
-                        datatype.addProperty(OWL2.onDatatype, onDatatype);
-//                        datatype.addSuperClass(onDatatype);
-
+                        datatype.addSuperClass(onDatatype);
 //                        OntClass equivClass = ontology.createOntResource(OntClass.class,
 //                                RDFS.Datatype,
 //                                null);
@@ -277,19 +314,18 @@ public class XSD2OWLMapper {
     }
 
     private OntClass convertListOrUnion(String URI) {
-        // TODO Find out a way to present "SymbolicName", "ArrayDimensions"
         OntClass dataType = ontology.createOntResource(OntClass.class,
                 RDFS.Datatype,
                 URI + Constants.DATATYPE_SUFFIX);
 
         Resource anySimpleType = ontology.getResource(XSD.getURI() + "anySimpleType");
-//        dataType.addSuperClass(anySimpleType);
+        dataType.addSuperClass(anySimpleType);
 
-        OntClass eqDataType = ontology.createOntResource(OntClass.class,
-                RDFS.Datatype,
-                null);
-        eqDataType.addProperty(OWL2.onDatatype, anySimpleType);
-        dataType.addEquivalentClass(eqDataType);
+//        OntClass eqDataType = ontology.createOntResource(OntClass.class,
+//                RDFS.Datatype,
+//                null);
+//        eqDataType.addProperty(OWL2.onDatatype, anySimpleType);
+//        dataType.addEquivalentClass(eqDataType);
 
         return dataType;
     }
@@ -307,17 +343,17 @@ public class XSD2OWLMapper {
             enumClass.addSuperClass(ontology.createAllValuesFromRestriction(null,
                     hasValue,
                     XSDUtil.getXSDResource(base.getName())));
-            enumClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
-                    hasValue,
-                    1));
+//            enumClass.addSuperClass(ontology.createMaxCardinalityRestriction(null,
+//                    hasValue,
+//                    1));
         } else {
             enumClass.addSuperClass(ontology.createClass(baseURI));
         }
 
         OntClass enumSuperClass = ontology.createClass(Constants.ONTMALIZER_ENUMERATION_CLASS_NAME);
         //This statement should be added, but there is no Enumeration resource in any vocabulary. Only in LinkedModel
-        //enumSuperClass.addSuperClass(DTYPE.Enumeration);
-        //Individual enumResource = ontology.createIndividual(URI + "_Enumeration", enumSuperClass);
+//        enumSuperClass.addSuperClass(DTYPE.Enumeration);
+//        Individual enumResource = ontology.createIndividual(URI + "_Enumeration", enumSuperClass);
         Individual enumResource = ontology.createIndividual(enumClass.getURI() + "_Enumeration", enumSuperClass);
 
         for (int i = 0, length = facets.enumeration.length; i < length; i++) {
@@ -368,8 +404,7 @@ public class XSD2OWLMapper {
         }
         // I did not use getResource methods because the class I am looking for may not be created yet.
 
-        datatype.addProperty(OWL2.onDatatype, onDatatype);
-//        datatype.addSuperClass(onDatatype);
+        datatype.addSuperClass(onDatatype);
 
 //        OntClass equivClass = ontology.createOntResource(OntClass.class,
 //                RDFS.Datatype,
@@ -619,6 +654,7 @@ public class XSD2OWLMapper {
                 } else if (element.getType().isComplexType()) {
                     prop = ontology.createObjectProperty(mainURI + "#" + NamingUtil.createPropertyName(opprefix, element.getName()));
 
+                    // TODO: Mustafa: How will this be possible?
                     if (element.getType().getTargetNamespace().equals(XSDDatatype.XSD)) {
                         if (element.getType().getName().equals("anyType")) {
                             parent.addSuperClass(ontology.createAllValuesFromRestriction(null,
@@ -659,7 +695,13 @@ public class XSD2OWLMapper {
                 int maxOccurs = p.getMaxOccurs().intValue();
                 if (maxOccurs == 1) {
                     if (minOccurs == 1) {
-                        parent.addSuperClass(ontology.createCardinalityRestriction(null, prop, 1));
+                        // sub tag of choice which has minOccurs="0" maxOccurs="unbounded" -> handle properly
+                        if (group.getCompositor().toString() == "choice") {
+
+                        }
+                        else {
+                            parent.addSuperClass(ontology.createCardinalityRestriction(null, prop, 1));
+                        }
                     } else // minOccurs can be 0 in this case, logically
                     {
                         parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, 1));
@@ -667,7 +709,8 @@ public class XSD2OWLMapper {
                 } else {
                     parent.addSuperClass(ontology.createMinCardinalityRestriction(null, prop, minOccurs));
                     if (maxOccurs == -1) {
-                        parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, Integer.MAX_VALUE));
+                        // maxOccurs = "unbounded"
+//                        parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, Integer.MAX_VALUE));
                     } else {
                         parent.addSuperClass(ontology.createMaxCardinalityRestriction(null, prop, maxOccurs));
                     }
