@@ -23,6 +23,7 @@ class Messages {
 
 }
 
+
 class RequestQuery {
 
     String data;
@@ -44,6 +45,43 @@ class RequestQuery {
     }
 
 }
+
+
+class RequestOntology {
+
+    String schema;
+    String instance;
+    String ontname;
+
+    public RequestOntology(){
+    }
+
+    public String getSchema() {
+        return schema;
+    }
+
+    public void setSchema(String schema) {
+        this.schema = schema;
+    }
+
+    public String getInstance() {
+        return instance;
+    }
+
+    public void setInstance(String instance) {
+        this.instance = instance;
+    }
+
+    public String getOntName() {
+        return ontname;
+    }
+
+    public void setName(String ontname) {
+        this.ontname = ontname;
+    }
+
+}
+
 
 class Success extends Messages {
 

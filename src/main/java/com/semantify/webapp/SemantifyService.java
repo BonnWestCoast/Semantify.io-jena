@@ -14,7 +14,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.XMLConstants;
-import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -67,33 +66,29 @@ public class SemantifyService {
 
 
     @POST
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMessage(
-            @FormDataParam("schema") InputStream schemaInputStream,
-            @FormDataParam("instance") InputStream instanceInputStream,
-            @FormDataParam("schema") FormDataContentDisposition schemaFileName,
-            @FormDataParam("instance") FormDataContentDisposition instanceFileName,
-            @FormDataParam("ontName") String ontName
+            RequestOntology requestOntology
     ) {
 
-        /* note: dirty code to reuse the InputStream several times */
-        String schemaIS = isToString(schemaInputStream);
-        String instanceIS = isToString(instanceInputStream);
+        String schema = requestOntology.getSchema();
+        String instance = requestOntology.getInstance();
+        String ontName = requestOntology.getOntName();
 
-        InputStream schema = stringToInputStream(schemaIS);
-        InputStream instance = stringToInputStream(instanceIS);
+        InputStream schemaIS = stringToInputStream(schema);
+        InputStream instanceIS = stringToInputStream(instance);
 
-        boolean areValidXML = validateXML(schema, instance);
+        boolean areValidXML = validateXML(schemaIS, instanceIS);
 
         System.out.println("Valid XML: " + areValidXML);
 
         if (areValidXML) {
 
-            schema = stringToInputStream(schemaIS);
-            instance = stringToInputStream(instanceIS);
+            schemaIS = stringToInputStream(schema);
+            instanceIS = stringToInputStream(instance);
 
-            OntHandler oh = new OntHandler(ontName, schema, instance);
+            OntHandler oh = new OntHandler(ontName, schemaIS, instanceIS);
             oh.convertOntology();
             oh.storeOntology();
 
@@ -202,7 +197,7 @@ class OntHandler {
 
         try {
 
-            //
+            /* Write model to string */
             ByteArrayOutputStream os = new ByteArrayOutputStream();
             this.ontController.getOntology().writeOntology(os, "N3");
             this.ontController.getModel().writeModel(os, "N3");
@@ -212,6 +207,7 @@ class OntHandler {
             RDFStoreController controller = new RDFStoreController();
 
             controller.storeOntology(this.ontName, is);
+            //controller.cleanDataset();
 
         } catch (Exception e) {
             System.out.println("Error :" +  e.toString());

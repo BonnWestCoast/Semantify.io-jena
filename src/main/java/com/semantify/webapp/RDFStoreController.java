@@ -1,9 +1,9 @@
 package com.semantify.webapp;
 
-import org.apache.jena.graph.Graph;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.tdb.TDBFactory;
+import org.junit.Test;
 
 import java.io.*;
 import java.util.*;
@@ -13,17 +13,17 @@ public class RDFStoreController {
     static String schemas = "schema";
     static Dataset dataset = TDBFactory.createDataset(schemas);
 
-    /*
-    static String instances = "instances";
-    static Dataset datasetTwo = TDBFactory.createDataset(instances);
-    */
-
-    public static void main(String[] args) {
+    /**
+     * Here we test the rest of the methods
+     */
+    @Test
+    public void testStoreController() {
 
         RDFStoreController storeController = new RDFStoreController();
 
         /* fill the dataset */
-        // storeController.fillDataset(storeController);
+        storeController.fillDataset(storeController);
+
         //storeController.queryOntology("product", query);
         //storeController.listOntologies();
         //storeController.getSchemaByName("tbox");
