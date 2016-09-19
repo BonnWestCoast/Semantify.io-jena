@@ -51,7 +51,7 @@ class RequestOntology {
 
     String schema;
     String instance;
-    String ontname;
+    String ontName;
 
     public RequestOntology(){
     }
@@ -73,11 +73,11 @@ class RequestOntology {
     }
 
     public String getOntName() {
-        return ontname;
+        return ontName;
     }
 
-    public void setName(String ontname) {
-        this.ontname = ontname;
+    public void setOntName(String ontName) {
+        this.ontName = ontName;
     }
 
 }

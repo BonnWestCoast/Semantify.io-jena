@@ -99,6 +99,7 @@ public class SemantifyService {
         } else {
 
             //ToDo: return a response with a error message
+
             Error error = new Error("Something is wrong!");
             String json = new Gson().toJson(error);
             return Response.status(500).entity(json).build();
