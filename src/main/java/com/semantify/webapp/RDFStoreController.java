@@ -118,7 +118,7 @@ public class RDFStoreController {
      * @param nameSchema
      * @return m, the model
      */
-    public String getSchemaByName(String nameSchema) {
+    public String getSchemaByName(String nameSchema, boolean isVisualization) {
 
         Model m = null;
         String modelContent = "";
@@ -132,7 +132,12 @@ public class RDFStoreController {
 
                 m = dataset.getNamedModel(nameSchema);
                 System.out.println();
-                m.write(os);
+                if (isVisualization) {
+                    m.write(os, "Turtle");
+                }
+                else {
+                    m.write(os);
+                }
                 modelContent = new String(os.toByteArray());
 
             } else {
@@ -148,7 +153,6 @@ public class RDFStoreController {
         return modelContent;
 
     }
-
 
     /**
      * Looks on the dataset variable and returns a list of all the models

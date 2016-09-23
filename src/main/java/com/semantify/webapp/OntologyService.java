@@ -29,7 +29,7 @@ public class OntologyService {
 
         RDFStoreController controller = new RDFStoreController();
         // NOTE: Right now the ID is the name of the model
-        String m = controller.getSchemaByName(id);
+        String m = controller.getSchemaByName(id, false);
 
         if ( m.isEmpty() ) {
 
@@ -43,6 +43,38 @@ public class OntologyService {
             ontology = new Ontology(m);
             json = new Gson().toJson(ontology);
 
+        }
+
+        return Response.status(status).entity(json).build();
+    }
+
+    /**
+     * Recovers the specified model
+     * @param id the name of the model
+     * @return the model in String format
+     */
+    @GET
+    @Path("/visualizer/{id}")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getVisualizedMessage( @PathParam("id") String id ) {
+
+        Ontology ontology = null;
+        String json = "";
+        int status = 200;
+
+        RDFStoreController controller = new RDFStoreController();
+        // NOTE: Right now the ID is the name of the model
+        String m = controller.getSchemaByName(id, true);
+
+        if ( m.isEmpty() ) {
+            status = 500;
+            String message = String.format("The schema/instance %s does not exist!!!", id );
+            Error error = new Error(message);
+            json = new Gson().toJson(error);
+        } else {
+            ontology = new Ontology(m);
+            json = new Gson().toJson(ontology);
         }
 
         return Response.status(status).entity(json).build();
