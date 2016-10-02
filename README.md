@@ -7,3 +7,8 @@
 6. To test reasoning: `http://localhost:8080/semantify/rest/reasoner`
 7. If inconsistent - returns false
 8. Files can be found in resource folder
+
+#Docker
+1. Install docker from: https://www.docker.com/
+2. docker run -itdp 8080:8080 --name jena akorovin/semantify.io-jena
+3. website should be accessible from localhost:8080
