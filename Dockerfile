@@ -9,4 +9,4 @@ COPY . /usr/src/semantify/
 
 RUN mvn -f /usr/src/semantify/pom.xml clean dependency:copy-dependencies package
 
-COPY /usr/src/semantify/target/semantify.war /usr/local/tomcat/webapps/
+RUN cp /usr/src/semantify/target/semantify.war /usr/local/tomcat/webapps/
