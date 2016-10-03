@@ -10,5 +10,6 @@
 
 #Docker
 1. Install docker from: https://www.docker.com/
-2. docker run -itdp 8080:8080 --name jena akorovin/semantify.io-jena
-3. website should be accessible from localhost:8080
+2. Run in console: `docker run -itdp 8080:8080 --name jena akorovin/semantify.io-jena`. 
+it will download docker image and build it on your host. And also it will build github project and run it on tomcat.
+3. website should be accessible from `localhost:8080\semantify`
