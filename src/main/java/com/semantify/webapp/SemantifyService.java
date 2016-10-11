@@ -3,11 +3,7 @@ package com.semantify.webapp;
 import com.google.gson.Gson;
 import opcua.ontmalizer.OntmalizerController;
 import org.apache.commons.io.IOUtils;
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import javax.ws.rs.*;
@@ -20,11 +16,13 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.*;
 
+/* Logging */
+import org.apache.log4j.Logger;
 
 @Path("/ontologies")
 public class SemantifyService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SemantifyService.class);
+    //static Logger log = Logger.getLogger(SemantifyService.class);
 
     /**
      * Conversion InputStream --> String
@@ -65,6 +63,12 @@ public class SemantifyService {
     }
 
 
+    /**
+     * Receives a JSON request, this request is transformed into a RequestOntology object with the next fields:
+     * schema, instance, ontName, and ontFormat.
+     * @param requestOntology
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -72,23 +76,25 @@ public class SemantifyService {
             RequestOntology requestOntology
     ) {
 
+        /* get the value of the fields */
         String schema = requestOntology.getSchema();
         String instance = requestOntology.getInstance();
         String ontName = requestOntology.getOntName();
+        String ontFormat = requestOntology.getOntFormat();
 
+        /* Validate both schema and instance */
         InputStream schemaIS = stringToInputStream(schema);
         InputStream instanceIS = stringToInputStream(instance);
-
         boolean areValidXML = validateXML(schemaIS, instanceIS);
 
-        System.out.println("Valid XML: " + areValidXML);
+        //log.info("Valid XML: " + areValidXML);
 
         if (areValidXML) {
 
             schemaIS = stringToInputStream(schema);
             instanceIS = stringToInputStream(instance);
 
-            OntHandler oh = new OntHandler(ontName, schemaIS, instanceIS);
+            OntHandler oh = new OntHandler(ontName, ontFormat, schemaIS, instanceIS);
             oh.convertOntology();
             oh.storeOntology();
 
@@ -98,11 +104,10 @@ public class SemantifyService {
 
         } else {
 
-            //ToDo: return a response with a error message
-
             Error error = new Error("Something is wrong!");
             String json = new Gson().toJson(error);
             return Response.status(500).entity(json).build();
+
         }
 
     }
@@ -124,9 +129,11 @@ public class SemantifyService {
             return true;
 
         } catch(SAXException ex) {
+            //log.error("Exception ", ex);
             return false;
         } catch (IOException ex) {
             // ToDo: Returns also the error message
+            //log.error("Exception ", ex);
             return false;
         }
     }
@@ -139,13 +146,15 @@ public class SemantifyService {
             InputStream schemaInputStream = classLoader.getResourceAsStream("opc_ua/UANodeSet.xsd");
             InputStream instanceInputStream = classLoader.getResourceAsStream("opc_ua/Opc.Ua.NodeSet2.test.xml");
             String ontName = "Test_OPCUA";
+            String ontFormat = "N3";
 
-            OntHandler oh = new OntHandler(ontName, schemaInputStream, instanceInputStream);
+            OntHandler oh = new OntHandler(ontName, ontFormat, schemaInputStream, instanceInputStream);
             oh.convertOntology();
             oh.storeOntology();
 
         } catch (Exception e) {
-            LOGGER.error("{}", e.getMessage());
+            //log.error("Exception ", e);
+            System.out.println("Exception " + e.getMessage());
         }
     }
 
@@ -172,12 +181,21 @@ class OntHandler {
     }
 
     public String ontName = null;
+    public String ontFormat = null;
     private InputStream schemaInputStream = null;
     private InputStream instanceInputStream = null;
     private OntmalizerController ontController = null;
 
-    public OntHandler(String ontName, InputStream schemaInputStream, InputStream instanceInputStream) {
+    /**
+     * @param ontName
+     * @param ontFormat may be one of these values;
+     * "RDF/XML","RDF/XML-ABBREV","N-TRIPLE","N3".
+     * @param schemaInputStream
+     * @param instanceInputStream
+     */
+    public OntHandler(String ontName, String ontFormat, InputStream schemaInputStream, InputStream instanceInputStream) {
         this.ontName = ontName;
+        this.ontFormat = ontFormat;
         this.schemaInputStream = schemaInputStream;
         this.instanceInputStream = instanceInputStream;
         this.ontController = new OntmalizerController(schemaInputStream, instanceInputStream);
@@ -200,15 +218,14 @@ class OntHandler {
 
             /* Write model to string */
             ByteArrayOutputStream os = new ByteArrayOutputStream();
-            this.ontController.getOntology().writeOntology(os, "N3");
-            this.ontController.getModel().writeModel(os, "N3");
+            this.ontController.getOntology().writeOntology(os, ontFormat);
+            this.ontController.getModel().writeModel(os, ontFormat);
 
             String result = os.toString("UTF-8");
             InputStream is = stringToInputStream(result);
             RDFStoreController controller = new RDFStoreController();
 
             controller.storeOntology(this.ontName, is);
-            //controller.cleanDataset();
 
         } catch (Exception e) {
             System.out.println("Error :" +  e.toString());

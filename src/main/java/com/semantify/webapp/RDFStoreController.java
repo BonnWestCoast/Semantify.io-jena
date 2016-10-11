@@ -14,32 +14,39 @@ public class RDFStoreController {
     static Dataset dataset = TDBFactory.createDataset(schemas);
 
     /**
-     * Here we test the rest of the methods
+     * Here we test the methods
      */
     @Test
     public void testStoreController() {
 
         RDFStoreController storeController = new RDFStoreController();
 
-        /* fill the dataset */
-        storeController.fillDataset(storeController);
+        /* fill the dataset with dummy data */
+        //storeController.fillDataset(storeController);
 
         //storeController.queryOntology("product", query);
-        //storeController.listOntologies();
+
+        /* print a list of all ontologies in the database */
+        //List<String> listOnt = storeController.listOntologies();
+        //for (String name: listOnt) imprime(name);
+
+        //String result = storeController.getStatsFromOntology("tbox");
         //storeController.getSchemaByName("tbox");
+
         //storeController.getSchemaByName("xobt");
         //storeController.cleanDataset();
-        storeController.getSchemas();
-
+        //storeController.getSchemas();
     }
 
+
     /**
-     * Auxiliar function to print easier
+     * Auxiliar method to print easier
      * @param mensaje is an String object
      */
     public static void imprime(String mensaje) {
         System.out.println(mensaje);
     }
+
 
     /**
      * Auxiliar method to delete all the models in the dataset
@@ -55,6 +62,7 @@ public class RDFStoreController {
         }
 
     }
+
 
     /**
      * Auxiliar method to create dummy model examples
@@ -80,6 +88,60 @@ public class RDFStoreController {
         }
     }
 
+
+    /**
+     * It gets the number of classes, properties and triples in the ontology
+     * @param nameSchema
+     * @return
+     */
+    public String getStatsFromOntology(String nameSchema) {
+
+        Model model = null;
+        String stringResult = "";
+        dataset.begin(ReadWrite.READ);
+
+        /* Basic query to get all triples */
+        String queryString = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
+                             "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+                             "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+                             "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> " +
+                             "select ( count(?owl) as ?owl_classes )" +
+                             "( count(?rdf_c) as ?rdf_classes )" +
+                             "( count(?rdf_p) as ?rdf_properties )" +
+                             "where {" +
+                             "    { ?owl a owl:Class . { select * where { ?a ?b ?c } } }" +
+                             "    union" +
+                             "    { ?rdf_p a rdf:Property . { select * where { ?a ?b ?c } } }" +
+                             "    union" +
+                             "    { ?rdf_c a rdf:Class . { select * where { ?a ?b ?c } } }" +
+                             "}";
+
+        try {
+
+            model = dataset.getNamedModel(nameSchema);
+            Query query = QueryFactory.create(queryString);
+            QueryExecution qe = QueryExecutionFactory.create(query, model);
+            ResultSet rs = qe.execSelect();
+            QuerySolution solution = rs.nextSolution();
+
+            /* Build stringResult */
+            stringResult += "OWL classes: " + solution.get("owl_classes").asLiteral().getInt() + "\n";
+            stringResult += "RDF classes: " + solution.get("rdf_classes").asLiteral().getInt() + "\n";
+            stringResult += "RDF Properties: " + solution.get("rdf_properties").asLiteral().getInt();
+
+            qe.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        } finally {
+            dataset.end();
+        }
+
+        return stringResult;
+
+    }
+
+
     /**
      * From nameSchema looks for the correspondent model and execute the query
      * @param nameSchema is the schema where we want to execute the query
@@ -98,7 +160,6 @@ public class RDFStoreController {
             QueryExecution qe = QueryExecutionFactory.create(query, model);
 
             ResultSet rs = qe.execSelect();
-            //ResultSetFormatter.out(System.out, rs, query);
             stringResult = ResultSetFormatter.asText(rs, query);
 
             qe.close();
@@ -108,10 +169,9 @@ public class RDFStoreController {
         } finally {
             dataset.end();
         }
-
         return stringResult ;
-
     }
+
 
     /**
      * From the name of the Schema returns the correspondent model
@@ -154,6 +214,7 @@ public class RDFStoreController {
 
     }
 
+
     /**
      * Looks on the dataset variable and returns a list of all the models
      * @return ontologies
@@ -193,11 +254,6 @@ public class RDFStoreController {
      */
     public void storeOntology(String nameSchema, String pathSchema) {
 
-        /**
-         * ToDo:
-         * Determine if we are dealing with an Schema or Instance
-         */
-
         dataset.begin(ReadWrite.WRITE);
 
         try {
@@ -209,7 +265,6 @@ public class RDFStoreController {
             dataset.getNamedModel(pathSchema);
             dataset.addNamedModel(nameSchema, model);
             dataset.commit();
-
 
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());
