@@ -79,7 +79,8 @@ public class SemantifyService {
         String schema = requestOntology.getSchema();
         String instance = requestOntology.getInstance();
         String ontName = requestOntology.getOntName();
-        String ontFormat = requestOntology.getOntFormat();
+        //String ontFormat = requestOntology.getOntFormat();
+        String ontFormat = "N3";
 
         /* Validate both schema and instance */
         InputStream schemaIS = stringToInputStream(schema);
@@ -106,8 +107,8 @@ public class SemantifyService {
             return Response.status(500).entity(json).build();
 
         }
-
     }
+
 
     /**
      * Validation of uploaded XML against to the uploaded XSD
