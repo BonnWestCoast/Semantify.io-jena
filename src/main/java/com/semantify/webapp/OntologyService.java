@@ -131,13 +131,15 @@ public class OntologyService {
          */
 
         String query = requestQuery.getData();
-        System.out.println(query);
 
         RDFStoreController controller = new RDFStoreController();
-        String queryResult = controller.queryOntology(ontology, query);
 
-        Success success = new Success(queryResult);
-        String json = new Gson().toJson(success);
+        /* Return query result and also stats */
+        String queryResult = controller.queryOntology(ontology, query);
+        String stats = controller.getStatsFromOntology(ontology);
+
+        ResponseQuery response = new ResponseQuery(queryResult, stats);
+        String json = new Gson().toJson(response);
 
         return Response.status(200).entity(json).build();
 

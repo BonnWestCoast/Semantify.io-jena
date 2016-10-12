@@ -169,6 +169,7 @@ public class RDFStoreController {
         } finally {
             dataset.end();
         }
+
         return stringResult ;
     }
 

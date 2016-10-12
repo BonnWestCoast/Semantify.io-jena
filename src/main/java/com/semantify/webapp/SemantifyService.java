@@ -22,7 +22,6 @@ import org.apache.log4j.Logger;
 @Path("/ontologies")
 public class SemantifyService {
 
-    //static Logger log = Logger.getLogger(SemantifyService.class);
 
     /**
      * Conversion InputStream --> String
@@ -86,8 +85,6 @@ public class SemantifyService {
         InputStream schemaIS = stringToInputStream(schema);
         InputStream instanceIS = stringToInputStream(instance);
         boolean areValidXML = validateXML(schemaIS, instanceIS);
-
-        //log.info("Valid XML: " + areValidXML);
 
         if (areValidXML) {
 
@@ -231,4 +228,5 @@ class OntHandler {
             System.out.println("Error :" +  e.toString());
         }
     }
+
 }

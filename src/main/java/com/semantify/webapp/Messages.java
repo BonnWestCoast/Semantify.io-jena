@@ -105,6 +105,31 @@ class Success extends Messages {
 
 }
 
+
+class ResponseQuery extends Messages {
+
+    String data = null;
+    String stats = null;
+
+    public ResponseQuery () {}
+
+    public ResponseQuery(String data, String stats) {
+        setTime();
+        this.data = data;
+        this.stats = stats;
+    }
+
+    public String getStats() {
+        return stats;
+    }
+
+    public void setStats(String stats) {
+        this.stats = stats;
+    }
+
+}
+
+
 /**
  * Helps to build the error messages
  */
